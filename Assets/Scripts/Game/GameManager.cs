@@ -8,6 +8,11 @@ public class GameManager : MonoBehaviour {
 
     static WaveManager m_waveManager;
 
+    [Header("Enemies")]
+    public Enemy PrefabEnemy;
+    public GameObject EnemyA;
+    public GameObject EnemyB;
+
     void Awake () {
         if (m_instance == null) {
             m_instance = this;
@@ -16,18 +21,17 @@ public class GameManager : MonoBehaviour {
             return;
         }
 
-        m_waveManager = new WaveManager();
+        m_waveManager = new WaveManager( PrefabEnemy, EnemyA, EnemyB );
     }
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
+        
         m_waveManager.Update();
-
     }
 }
