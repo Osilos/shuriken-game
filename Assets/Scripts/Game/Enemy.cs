@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour {
+    
+    public Transform body;
+    [SerializeField]
+    private Animator m_animator;
 
     public short health;
     public byte attackTypes;
@@ -10,6 +14,11 @@ public class Enemy : MonoBehaviour {
     void Awake () {
         health = 0;
         attackTypes = (byte)AttackType.Main;
+    }
+    
+
+    void Update () {
+        
     }
 
     void Start () {
