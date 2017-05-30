@@ -68,6 +68,12 @@ public class SphericalCoordinates {
     public Vector3 toCartesian {
         get {
             float a = radius * Mathf.Cos(elevation);
+
+            if (float.IsNaN( a * Mathf.Cos( polar ) )) {
+                Debug.Log( "radius: " + radius + " elevation:" + elevation + " polar:" + polar );
+                Debug.Log( "a: " + a + " x:" + (a * Mathf.Cos( polar )) + " y:" + (radius * Mathf.Sin( elevation )) + " z:" + a * Mathf.Sin( polar ) );
+            }
+
             return new Vector3( a * Mathf.Cos( polar ), radius * Mathf.Sin( elevation ), a * Mathf.Sin( polar ) );
         }
     }
@@ -81,7 +87,11 @@ public class SphericalCoordinates {
 
         if (cartesianCoordinate.x < 0f)
             polar += Mathf.PI;
-        elevation = Mathf.Asin( cartesianCoordinate.y / radius );
+        elevation = Mathf.Asin( Mathf.Clamp( cartesianCoordinate.y / radius, -1f + Mathf.Epsilon, 1f - Mathf.Epsilon ) );
+
+        if(float.IsNaN( elevation )) {
+            Debug.Log( "FromCartesian:: elevation:" + elevation + " cartesianCoordinate.y:" + cartesianCoordinate.y + " radius:" + radius );
+        }
 
         return this;
     }
