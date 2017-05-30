@@ -60,6 +60,7 @@ public class ShurikenBox : MonoBehaviour {
         {
             l_ShurikenRB.isKinematic = false;
             l_ShurikenRB.useGravity = false;
+            l_ShurikenRB.constraints = RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
         }
     }
 }

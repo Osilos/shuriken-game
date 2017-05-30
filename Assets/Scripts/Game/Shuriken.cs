@@ -7,6 +7,9 @@ public class Shuriken : OVRGrabbable {
     public Action<Shuriken> OnGrabStart;
     public Action<Shuriken> OnGrabEnd;
 
+    [SerializeField]
+    private float m_TimeBeforeDestroy = 10f;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -22,5 +25,11 @@ public class Shuriken : OVRGrabbable {
     {
         if (OnGrabEnd != null) OnGrabEnd(this);
         base.GrabEnd(linearVelocity, angularVelocity);
+        StartCoroutine(DelayDestroy());
+    }
+
+    IEnumerator DelayDestroy()
+    {
+        yield return new WaitForSeconds(m_TimeBeforeDestroy);
     }
 }
