@@ -17,11 +17,12 @@ public class WaveManager {
 
         m_sphericalTransform = new SphericalCoordinates( new Vector3(0f, 0f, 0f), 1f, 20f, -(Mathf.PI * 2f), Mathf.PI * 2f, 0f, Mathf.PI / 2f );
 
-        PlayWave(new Vector3[3] {
-            new Vector3(0f, 0f, 0f),
-            new Vector3(180f, 180f, 0f),
-            new Vector3(360f, 360f, 0f)
+        PlayWave(new Vector3[] {
+            new Vector3(0f, 0f, 20f),
+            new Vector3(10f, 5f, 20f)
+            //new Vector3(360f, 360f, 0f)
         } );
+        
     }
 
     public void Update () {
@@ -42,12 +43,15 @@ public class WaveManager {
 
         for (int i = 0; i < enemies.Length; ++i) {
             enemy = InstantiateEnemy();
-            
+
+            enemies[i] += GameManager.mainCamera.transform.position;
+
+
             m_sphericalTransform.FromCartesian( enemies[i] );
             m_sphericalTransform.SetRadius( enemies[i].z );
             enemy.gameObject.transform.position = m_sphericalTransform.toCartesian;
 
-            enemy.gameObject.transform.LookAt( new Vector3( 0f, 0f, 0f ) );
+            enemy.gameObject.transform.LookAt( GameManager.mainCamera.transform.position );
         }
     }
 }

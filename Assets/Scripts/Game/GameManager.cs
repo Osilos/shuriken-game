@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour {
 
+    public static Camera mainCamera;
+
     static GameManager m_instance = null;
 
     static WaveManager m_waveManager;
@@ -21,6 +23,7 @@ public class GameManager : MonoBehaviour {
             return;
         }
 
+        mainCamera = Camera.main;
         m_waveManager = new WaveManager( PrefabEnemy, EnemyA, EnemyB );
     }
 
