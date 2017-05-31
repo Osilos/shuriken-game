@@ -9,11 +9,15 @@ public class GameManager : MonoBehaviour {
     static GameManager m_instance = null;
 
     static WaveManager m_waveManager;
+    static ScoreManager m_scoreManager;
 
     [Header("Enemies")]
     public Enemy PrefabEnemy;
     public GameObject EnemyA;
     public GameObject EnemyB;
+
+    [Header("Score")]
+    [SerializeField] private Score3D m_scoreGO;
 
     void Awake () {
         if (m_instance == null) {
@@ -25,6 +29,10 @@ public class GameManager : MonoBehaviour {
 
         mainCamera = Camera.main;
         m_waveManager = new WaveManager( PrefabEnemy, EnemyA, EnemyB );
+        if (m_scoreGO != null)
+        {
+            m_scoreManager = new ScoreManager(m_scoreGO);
+        }
     }
 
     // Use this for initialization
@@ -33,8 +41,7 @@ public class GameManager : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-        
+	void Update () {        
         m_waveManager.Update();
     }
 }
