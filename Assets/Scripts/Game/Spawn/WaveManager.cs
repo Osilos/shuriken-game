@@ -10,20 +10,30 @@ public class WaveManager : MonoBehaviour {
 
     private List<List<StepWave>> waves = new List<List<StepWave>>();
     private List<List<StepWave>> wavesToPlay = new List<List<StepWave>>();
+    private int numberEnemy = 0;
+    private int numberDeathForNextWave;
 
     private void Start ()
     {
         waves = GetComponents<WaveSettings>().ToList().Select(x => x.steps).ToList();
         wavesToPlay = new List<List<StepWave>>(waves);
         Play();
+        Enemy.onEnemyDie.AddListener(OnEnemyDestroy);
+    }
+
+    private void OnEnemyDestroy (Enemy enemy)
+    {
+        numberEnemy++;
+        if (numberEnemy >= numberDeathForNextWave)
+            Play();
     }
 
     private void Play ()
     {
-        StartCoroutine(PlayRoutine());
+        PlayRoutine();
     }
 
-    private IEnumerator PlayRoutine ()
+    private void PlayRoutine ()
     {
         if (wavesToPlay.Count == 0)
             wavesToPlay = new List<List<StepWave>>(waves);
@@ -31,9 +41,8 @@ public class WaveManager : MonoBehaviour {
         wavesToPlay = wavesToPlay.OrderBy(x => Random.Range(0f, 1f)).ToList();
         List<StepWave> wave = wavesToPlay[0];
         wavesToPlay.Remove(wave);
+        numberDeathForNextWave = wave.Count;
         PlayWave(wave);
-        yield return new WaitForSeconds(wave.Select(x => x.timeBeforeSpawn).ToList().Sum());
-        Play();
     }
 
     private void PlayWave (List<StepWave> steps)
