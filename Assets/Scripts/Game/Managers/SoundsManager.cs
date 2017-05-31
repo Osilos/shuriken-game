@@ -5,7 +5,7 @@ using System;
 
 public class SoundsManager: MonoBehaviour {
     #region Variables
-    private const string PATH_SOUNDS    = "";
+    private const string PATH_SOUNDS    = "Sounds/";
     private const float GENERAL_VOLUME  = 1.0f;
 
     #region SFX
@@ -33,7 +33,7 @@ public class SoundsManager: MonoBehaviour {
     #endregion
 
     #region Initialisation & Destroy
-    public void Awake() {
+    private void Awake() {
         InitSFX();
         InitMusics();
     }
@@ -52,7 +52,7 @@ public class SoundsManager: MonoBehaviour {
         Array l_Names   = Enum.GetValues(typeof(SM_SFX));
         
         foreach (SM_SFX l_Name in l_Names) {
-            AudioClip l_SFX = Resources.Load(PATH_SFX + l_Name.ToString()) as AudioClip;
+            AudioClip l_SFX = Resources.Load<AudioClip>(PATH_SFX + l_Name.ToString());
             if (l_SFX == null) Debug.LogError("SoundsManager: " + PATH_SFX + l_Name.ToString() + " not found.");
             m_SFXDictionary.Add(l_Name, l_SFX);
         }
@@ -76,7 +76,7 @@ public class SoundsManager: MonoBehaviour {
         Array l_Names       = Enum.GetValues(typeof(SM_Musics));
 
         foreach (SM_Musics l_Name in l_Names) {
-            AudioClip l_Music = Resources.Load(PATH_MUSICS + l_Name.ToString()) as AudioClip;
+            AudioClip l_Music = Resources.Load<AudioClip>(PATH_MUSICS + l_Name.ToString());
             if (l_Music == null) Debug.LogError("SoundsManager: " + PATH_MUSICS + l_Name.ToString() + " not found.");
             m_MusicsDictionary.Add(l_Name, l_Music);
         }
@@ -90,7 +90,7 @@ public class SoundsManager: MonoBehaviour {
         p_Sources.Add(l_AudioSource);
     }
 
-    public void OnDestroy() {
+    private void OnDestroy() {
         m_SFXSources.Clear();
         m_SFXSources = null;
         
@@ -105,16 +105,14 @@ public class SoundsManager: MonoBehaviour {
     }
     #endregion
     
-    #region SFX Managment
+    #region Sounds Managment
     public void PlaySfx(SM_SFX p_Sfx) {
         if (!m_SFXDictionary.ContainsKey(p_Sfx)) return;
 
         AudioSource l_AudioSource = m_SFXSources.Find(item => !item.isPlaying);
 		if (l_AudioSource) l_AudioSource.PlayOneShot(m_SFXDictionary[p_Sfx], SFX_VOLUME * GENERAL_VOLUME);
 	}
-    #endregion
-
-    #region Musics Managment
+    
     public void PlayMusic(SM_Musics p_Music) {
         if (!m_MusicsDictionary.ContainsKey(p_Music)) return;
 
@@ -127,6 +125,7 @@ public class SoundsManager: MonoBehaviour {
         m_MusicsSources[m_CurrentMusicID].Play();
     }
 
+    #region Utils
     private IEnumerator FadeCoroutine() {
         float l_ElapsedTime         = 0;
         float l_LastMusicVolume     = m_MusicsSources[m_LastMusicID].volume;
@@ -143,6 +142,7 @@ public class SoundsManager: MonoBehaviour {
 
         m_MusicsSources[m_LastMusicID].Stop();
     }
+    #endregion
     #endregion
 }
 
