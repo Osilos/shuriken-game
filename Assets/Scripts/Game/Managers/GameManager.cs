@@ -14,8 +14,7 @@ public class GameManager : MonoBehaviour {
 	public static Camera mainCamera;
 
 	public static GameManager instance = null;
-
-	static Wave m_waveManager;
+    
 	static ScoreManager m_scoreManager;
 
     private GameState m_state;
@@ -36,6 +35,7 @@ public class GameManager : MonoBehaviour {
 
     public FXManager fxManager;
     public SoundsManager soundManager;
+    public WaveManager waveManager;
 
     void Awake () {
 		if (instance == null) {
@@ -61,7 +61,7 @@ public class GameManager : MonoBehaviour {
     {
         m_state = GameState.PLAYING;
         m_timer.LaunchTimer(m_timerTotalTime);
-        // Add script to launch waves
+        waveManager.Play();
     }
 
 
@@ -69,7 +69,7 @@ public class GameManager : MonoBehaviour {
     {
         m_state = GameState.WAITING;
         onGameOver.Invoke();
-        // Add script to stop waves
+        waveManager.Stop();
     }
 
     

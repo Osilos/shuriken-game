@@ -17,7 +17,6 @@ public class WaveManager : MonoBehaviour {
     {
         waves = GetComponents<WaveSettings>().ToList().Select(x => x.steps).ToList();
         wavesToPlay = new List<List<StepWave>>(waves);
-        Play();
         Enemy.onEnemyDie.AddListener(OnEnemyDestroy);
     }
 
@@ -28,9 +27,14 @@ public class WaveManager : MonoBehaviour {
             Play();
     }
 
-    private void Play ()
+    public void Play ()
     {
         PlayRoutine();
+    }
+
+    public void Stop ()
+    {
+        // TODO: stop waves
     }
 
     private void PlayRoutine ()
