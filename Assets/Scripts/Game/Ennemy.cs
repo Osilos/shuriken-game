@@ -5,11 +5,8 @@ using UnityEngine.Events;
 
 public class OnEnemyDieEvent : UnityEvent<Enemy> { }
 
-public class Enemy : MonoBehaviour {
+public class Ennemy : MonoBehaviour {
     
-    public Transform body;
-    [SerializeField]
-    private Animator m_animator;
 
     public OnEnemyDieEvent onEnemyDie = new OnEnemyDieEvent();
 

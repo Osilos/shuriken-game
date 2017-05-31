@@ -44,8 +44,10 @@ public class FXManager: MonoBehaviour {
         GameObject l_Object         = Instantiate(m_Particles[p_FX]);
         l_Object.transform.parent   = p_Parent;
         l_Object.transform.position = p_Position;
+        ParticleSystem l_FX         = l_Object.GetComponent<ParticleSystem>();
+        l_FX.loop                   = false;
 
-        StartCoroutine(PlayOnceCoroutine(l_Object.GetComponent<ParticleSystem>()));
+        StartCoroutine(PlayOnceCoroutine(l_FX));
     }
 
     public int PlayRepeatedly(FM_FX p_FX, Transform p_Parent, Vector3 p_Position) {
@@ -54,23 +56,18 @@ public class FXManager: MonoBehaviour {
         GameObject l_Object         = Instantiate(m_Particles[p_FX]);
         l_Object.transform.parent   = p_Parent;
         l_Object.transform.position = p_Position;
+        ParticleSystem l_FX         = l_Object.GetComponent<ParticleSystem>();
+        l_FX.loop                   = true;
 
-        int l_ID = m_PlayingParticles.FindIndex(null);
-        Debug.Log(l_ID);
-        if (l_ID < 0) {
-            m_PlayingParticles.Add(l_Object.GetComponent<ParticleSystem>());
-            return m_PlayingParticles.Count - 1;
-        }
-        else {
-            m_PlayingParticles[l_ID] = l_Object.GetComponent<ParticleSystem>();
-            return l_ID;
-        }
+        m_PlayingParticles.Add(l_Object.GetComponent<ParticleSystem>());
+        return m_PlayingParticles.Count - 1;
     }
 
     public void StopFX(int p_FXID) {
-        if (p_FXID < 0) return;
+        if (p_FXID < 0 || p_FXID >= m_PlayingParticles.Count) return;
 
-        //TODO
+        Destroy(m_PlayingParticles[p_FXID].gameObject);
+        m_PlayingParticles[p_FXID] = null;
     }
 
     #region Utils

@@ -48,7 +48,6 @@ public class ShurikenBox : MonoBehaviour {
     void OnShurikenGrabStart(Shuriken p_Shuriken)
     {
         p_Shuriken.OnGrabStart -= OnShurikenGrabStart;
-        p_Shuriken.gameObject.transform.SetParent(null);
         SpawnShuriken();
     }
 

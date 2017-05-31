@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
+[RequireComponent(typeof(Rigidbody))]
 public class Shuriken : OVRGrabbable {
     public Action<Shuriken> OnGrabStart;
     public Action<Shuriken> OnGrabEnd;
@@ -39,6 +40,7 @@ public class Shuriken : OVRGrabbable {
         if(l_SnapTransform)
             snapOffset = l_SnapTransform;
         base.GrabBegin(hand, grabPoint);
+        transform.SetParent(null);
     }
 
     public override void GrabEnd(Vector3 linearVelocity, Vector3 angularVelocity)

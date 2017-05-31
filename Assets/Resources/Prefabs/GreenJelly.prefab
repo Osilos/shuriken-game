@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33925235207413118}
   - component: {fileID: 23647699931594322}
   - component: {fileID: 95715465941805216}
+  - component: {fileID: 114430351791406810}
   m_Layer: 0
   m_Name: GreenJelly
   m_TagString: Untagged
@@ -98,3 +99,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114430351791406810
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1574222106405954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f0a87c122a4d81439bce7ca0992d2d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  body: {fileID: 0}
+  m_animator: {fileID: 0}
+  health: 0
+  attackTypes: 0
