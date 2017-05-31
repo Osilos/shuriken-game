@@ -19,6 +19,9 @@ public class Shuriken : OVRGrabbable {
     [SerializeField]
     private GameObject m_TrailGO;
 
+    [SerializeField]
+    private float m_handSpeedMultiplier;
+
     // Use this for initialization
     void Start () {
         if (m_TargetCollider)
@@ -42,7 +45,7 @@ public class Shuriken : OVRGrabbable {
     {
         if (OnGrabEnd != null) OnGrabEnd(this);
         base.GrabEnd(linearVelocity, angularVelocity);
-        StartCoroutine(DelayDestroy());
+        Invoke("Destroy", m_TimeBeforeDestroy);
 
         if (m_TargetCollider)
             m_TargetCollider.SetActive(true);
@@ -50,10 +53,21 @@ public class Shuriken : OVRGrabbable {
             m_GrabCollider.SetActive(false);
         if (m_TrailGO)
             m_TrailGO.SetActive(true);
+
+        Rigidbody l_ShurikenRB = GetComponent<Rigidbody>();
+        if (l_ShurikenRB)
+        {
+            l_ShurikenRB.isKinematic = false;
+            l_ShurikenRB.useGravity = true;
+            l_ShurikenRB.constraints = RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
+            l_ShurikenRB.AddForce(linearVelocity * m_handSpeedMultiplier, ForceMode.Impulse);
+        }
     }
 
-    IEnumerator DelayDestroy()
+
+    private void Destroy ()
     {
-        yield return new WaitForSeconds(m_TimeBeforeDestroy);
+        Destroy(gameObject);
     }
+    
 }

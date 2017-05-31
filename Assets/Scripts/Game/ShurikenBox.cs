@@ -55,12 +55,5 @@ public class ShurikenBox : MonoBehaviour {
     void OnShurikenGrabEnd(Shuriken p_Shuriken)
     {
         p_Shuriken.OnGrabEnd -= OnShurikenGrabEnd;
-        Rigidbody l_ShurikenRB = p_Shuriken.GetComponent<Rigidbody>();
-        if (l_ShurikenRB)
-        {
-            l_ShurikenRB.isKinematic = false;
-            l_ShurikenRB.useGravity = false;
-            l_ShurikenRB.constraints = RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
-        }
     }
 }
