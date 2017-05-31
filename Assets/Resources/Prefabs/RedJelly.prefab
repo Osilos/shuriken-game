@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 33039965929108442}
   - component: {fileID: 23432981119166654}
   - component: {fileID: 95210829454987884}
+  - component: {fileID: 135751200160331432}
+  - component: {fileID: 114314653405905974}
   m_Layer: 0
   m_Name: RedJelly
   m_TagString: Untagged
@@ -98,3 +100,29 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114314653405905974
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1148861603612530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f0a87c122a4d81439bce7ca0992d2d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_scorePoints: 10
+  health: 0
+  attackTypes: 0
+--- !u!135 &135751200160331432
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1148861603612530}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5069138
+  m_Center: {x: -0.05695182, y: 0.081113994, z: 0.052440226}

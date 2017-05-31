@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class OnEnemyDieEvent : UnityEvent<Enemy> { }
+public class OnEnemyDieEvent : UnityEvent<Ennemy> { }
 
+[RequireComponent(typeof(Collider))]
 public class Ennemy : MonoBehaviour {
     
 
@@ -30,6 +31,12 @@ public class Ennemy : MonoBehaviour {
     }
     
 
+    private void OnTriggerEnter(Collider collider)
+    {
+        if (collider.CompareTag("bullet"))
+            OnHit();
+    }
+
     void Update () {
         
     }
@@ -43,11 +50,11 @@ public class Ennemy : MonoBehaviour {
     }
 
     void AnimDie () {
-
+        Destroy(gameObject);
     }
 
     void AnimHit () {
-
+        
     }
 
     void AnimMiss () {

@@ -55,12 +55,12 @@ public class Wave : MonoBehaviour {
     private GameObject InstantiateEnemy ()
     {
         GameObject enemy = Instantiate(ennemyPrefab);
-        enemy.GetComponent<Enemy>().onEnemyDie.AddListener(OnEnemyDie);
+        enemy.GetComponent<Ennemy>().onEnemyDie.AddListener(OnEnemyDie);
         return enemy;
     }
 
 
-    private void OnEnemyDie (Enemy enemy)
+    private void OnEnemyDie (Ennemy enemy)
     {
         GameManager.instance.OnEnemyDie(enemy);
     }
@@ -73,7 +73,7 @@ public class Wave : MonoBehaviour {
         int count = steps.Length;
         for (int i = 0; i < count; i++)
         {
-            yield return new WaitForSeconds(steps[i].time);
+            yield return new WaitForSeconds(steps[i].timeBeforeSpawn);
             ennemy = InstantiateEnemy();
 
             sphericalCoordinates.FromCartesian(steps[i].position);
