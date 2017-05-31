@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Timer : MonoBehaviour {
 
@@ -9,17 +10,16 @@ public class Timer : MonoBehaviour {
     [SerializeField]
     private float m_timerMinScale;
     private Vector3 m_timerInitialScale;
-    [SerializeField]
-    private float m_timerTotalTime;
+
+    public UnityEvent onTimerEnd;
     
 
-    private void Start () {
+    private void Awake () {
         m_timerInitialScale = m_timer3D.transform.localScale;
-        LaunchTimer(m_timerTotalTime);
 	}
 
 
-    private void LaunchTimer (float totalTime)
+    public void LaunchTimer (float totalTime)
     {
         StartCoroutine(TimerCoroutine(totalTime));
     }
@@ -39,6 +39,8 @@ public class Timer : MonoBehaviour {
 
             yield return null;
         }
+
+        onTimerEnd.Invoke();
     }
 
 
