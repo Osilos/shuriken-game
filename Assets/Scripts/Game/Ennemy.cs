@@ -1,9 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+
+public class OnEnemyDieEvent : UnityEvent<Enemy> { }
 
 public class Ennemy : MonoBehaviour {
     
+
+    public OnEnemyDieEvent onEnemyDie = new OnEnemyDieEvent();
+
+    [SerializeField]
+    private float m_scorePoints = 10;
+
+    public float ScorePoints
+    {
+        get
+        {
+            return m_scorePoints;
+        }
+    }
 
     public short health;
     public byte attackTypes;
@@ -41,6 +57,7 @@ public class Ennemy : MonoBehaviour {
     void LooseHealth () {
         if (--health <= 0) {
             AnimDie();
+            onEnemyDie.Invoke(this);
         } else {
             AnimHit();
         }
