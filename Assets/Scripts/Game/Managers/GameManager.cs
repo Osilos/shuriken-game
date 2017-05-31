@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour {
 
 	public static Camera mainCamera;
 
-	static GameManager m_instance = null;
+	public static GameManager instance = null;
 
 	static Wave m_waveManager;
     static ScoreManager m_scoreManager;
@@ -20,8 +20,8 @@ public class GameManager : MonoBehaviour {
     [SerializeField] private Score3D m_scoreGO;
 
     void Awake () {
-		if (m_instance == null) {
-			m_instance = this;
+		if (instance == null) {
+			instance = this;
 		} else {
 			Destroy( this );
 			return;
@@ -55,4 +55,10 @@ public class GameManager : MonoBehaviour {
 		
 		//m_waveManager.Update();
 	}
+
+
+    public void OnEnemyDie (Enemy enemy)
+    {
+        m_scoreManager.UpdateScore(enemy.ScorePoints);
+    }
 }
