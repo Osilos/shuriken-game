@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23647699931594322}
   - component: {fileID: 95715465941805216}
   - component: {fileID: 114430351791406810}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: GreenJelly
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,7 +110,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f0a87c122a4d81439bce7ca0992d2d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  body: {fileID: 0}
-  m_animator: {fileID: 0}
+  m_scorePoints: 10
   health: 0
   attackTypes: 0
