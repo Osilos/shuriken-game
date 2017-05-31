@@ -55,12 +55,12 @@ public class Wave : MonoBehaviour {
     private GameObject InstantiateEnemy ()
     {
         GameObject enemy = Instantiate(ennemyPrefab);
-        enemy.GetComponent<Ennemy>().onEnemyDie.AddListener(OnEnemyDie);
+        enemy.GetComponent<Enemy>().onEnemyDie.AddListener(OnEnemyDie);
         return enemy;
     }
 
 
-    private void OnEnemyDie (Ennemy enemy)
+    private void OnEnemyDie (Enemy enemy)
     {
         GameManager.instance.OnEnemyDie(enemy);
     }

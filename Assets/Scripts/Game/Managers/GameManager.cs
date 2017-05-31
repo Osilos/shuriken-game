@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour {
 	static ScoreManager m_scoreManager;
 
 	[Header("Enemies")]
-	public Ennemy PrefabEnemy;
+	public Enemy PrefabEnemy;
 	public GameObject EnemyA;
 	public GameObject EnemyB;
     public FXManager fxManager;
@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour {
 	}
 
 
-	public void OnEnemyDie (Ennemy enemy)
+	public void OnEnemyDie (Enemy enemy)
 	{
 		m_scoreManager.UpdateScore(enemy.ScorePoints);
 	}

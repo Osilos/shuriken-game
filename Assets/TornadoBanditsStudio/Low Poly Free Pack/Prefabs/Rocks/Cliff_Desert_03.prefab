@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33998699828635346}
   - component: {fileID: 23205575768371188}
   - component: {fileID: 64469054928498340}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Cliff_Desert_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35,9 +35,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1948403139241672}
-  m_LocalRotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: -0.00000069071547}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.000000021855694, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.3315163, y: -10.327549, z: 1.5493093}
+  m_LocalScale: {x: 0.29499802, y: 0.29499802, z: 0.29499802}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -72,6 +72,7 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!33 &33998699828635346
 MeshFilter:

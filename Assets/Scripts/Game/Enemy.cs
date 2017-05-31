@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class OnEnemyDieEvent : UnityEvent<Ennemy> { }
+public class OnEnemyDieEvent : UnityEvent<Enemy> { }
 
 [RequireComponent(typeof(Collider))]
-public class Ennemy : MonoBehaviour {
+public class Enemy : MonoBehaviour {
     
 
     public OnEnemyDieEvent onEnemyDie = new OnEnemyDieEvent();

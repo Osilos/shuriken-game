@@ -172,11 +172,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4497049945586332, guid: a54e768f89a125f41b339f81a9256b2c, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4497049945586332, guid: a54e768f89a125f41b339f81a9256b2c, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4497049945586332, guid: a54e768f89a125f41b339f81a9256b2c, type: 2}
       propertyPath: m_RootOrder
@@ -187,6 +187,10 @@ Prefab:
       propertyPath: m_parentTransform
       value: 
       objectReference: {fileID: 132611150}
+    - target: {fileID: 4497049945586332, guid: a54e768f89a125f41b339f81a9256b2c, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a54e768f89a125f41b339f81a9256b2c, type: 2}
   m_IsPrefabParent: 0
@@ -1426,11 +1430,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4570951822739170, guid: 64ee39804d8a29e4ea9e270d10bbfeb6, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4570951822739170, guid: 64ee39804d8a29e4ea9e270d10bbfeb6, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4570951822739170, guid: 64ee39804d8a29e4ea9e270d10bbfeb6, type: 2}
       propertyPath: m_RootOrder
@@ -1441,6 +1445,10 @@ Prefab:
       propertyPath: m_parentTransform
       value: 
       objectReference: {fileID: 132611150}
+    - target: {fileID: 4570951822739170, guid: 64ee39804d8a29e4ea9e270d10bbfeb6, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 64ee39804d8a29e4ea9e270d10bbfeb6, type: 2}
   m_IsPrefabParent: 0

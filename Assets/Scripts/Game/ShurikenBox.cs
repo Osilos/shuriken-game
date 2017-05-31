@@ -54,6 +54,5 @@ public class ShurikenBox : MonoBehaviour {
     void OnShurikenGrabEnd(Shuriken p_Shuriken)
     {
         p_Shuriken.OnGrabEnd -= OnShurikenGrabEnd;
-        
     }
 }
