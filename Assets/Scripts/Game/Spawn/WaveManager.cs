@@ -10,7 +10,7 @@ public class WaveManager : MonoBehaviour {
 
     private List<List<StepWave>> waves = new List<List<StepWave>>();
     private List<List<StepWave>> wavesToPlay = new List<List<StepWave>>();
-
+    
     private void Start ()
     {
         waves = GetComponents<WaveSettings>().ToList().Select(x => x.steps).ToList();
