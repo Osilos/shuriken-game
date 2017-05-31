@@ -16,10 +16,15 @@ public class Shuriken : OVRGrabbable {
     [SerializeField]
     private GameObject m_GrabCollider;
 
+    [SerializeField]
+    private GameObject m_TrailGO;
+
     // Use this for initialization
     void Start () {
         if (m_TargetCollider)
             m_TargetCollider.SetActive(false);
+        if (m_TrailGO)
+            m_TrailGO.SetActive(false);
         if (m_GrabCollider)
             m_GrabCollider.SetActive(true);
     }
@@ -43,6 +48,8 @@ public class Shuriken : OVRGrabbable {
             m_TargetCollider.SetActive(true);
         if (m_GrabCollider)
             m_GrabCollider.SetActive(false);
+        if (m_TrailGO)
+            m_TrailGO.SetActive(true);
     }
 
     IEnumerator DelayDestroy()
