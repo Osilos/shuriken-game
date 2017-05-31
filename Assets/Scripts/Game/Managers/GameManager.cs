@@ -60,6 +60,7 @@ public class GameManager : MonoBehaviour {
 	private void GameStart ()
     {
         m_state = GameState.PLAYING;
+        m_scoreManager.ResetScore();
         m_timer.LaunchTimer(m_timerTotalTime);
         waveManager.Play();
     }

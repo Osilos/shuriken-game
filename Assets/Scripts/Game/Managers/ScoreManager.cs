@@ -6,7 +6,6 @@ using System.Text;
 
 public class ScoreManager
 {
-
     private float m_currentScore = 0;
     private float m_bestScore    = 0;
 
@@ -38,6 +37,15 @@ public class ScoreManager
     public void UpdateScore (float scoreGained)
     {
         m_currentScore += scoreGained;
+        m_scoreFeedback.SetScore(m_currentScore);
+
+        m_bestScore = m_currentScore > m_bestScore ? m_currentScore : m_bestScore;
+    }
+
+
+    public void ResetScore ()
+    {
+        m_currentScore = 0;
         m_scoreFeedback.SetScore(m_currentScore);
     }
 
