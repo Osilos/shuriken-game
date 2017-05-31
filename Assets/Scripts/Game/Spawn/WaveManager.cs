@@ -15,21 +15,18 @@ public class WaveManager : MonoBehaviour {
     {
         waves = GetComponents<WaveSettings>().ToList().Select(x => x.steps).ToList();
         wavesToPlay = new List<List<StepWave>>(waves);
-        StartCoroutine(Play());
+        Play();
     }
 
-    private IEnumerator Play ()
+    private void Play ()
     {
-        if (wavesToPlay.Count != 0)
-        {
-            wavesToPlay = wavesToPlay.OrderBy(x => Random.Range(0, 1)).ToList();
-            List<StepWave> wave = wavesToPlay[0];
-            wavesToPlay.Remove(wave);
-            PlayWave(wave);
-            yield return new WaitForSeconds(wave.Select(x => x.time).Sum());
-            StartCoroutine(Play());
-        }
-        
+        if (wavesToPlay.Count == 0)
+            wavesToPlay = new List<List<StepWave>>(waves);
+
+        wavesToPlay = wavesToPlay.OrderBy(x => Random.Range(0f, 1f)).ToList();
+        List<StepWave> wave = wavesToPlay[0];
+        wavesToPlay.Remove(wave);
+        PlayWave(wave);
     }
 
     private void PlayWave (List<StepWave> steps)

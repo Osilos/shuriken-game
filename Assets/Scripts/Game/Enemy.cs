@@ -5,6 +5,7 @@ using UnityEngine.Events;
 
 public class OnEnemyDieEvent : UnityEvent<Enemy> { }
 
+[RequireComponent(typeof(Collider))]
 public class Enemy : MonoBehaviour {
     
 
@@ -24,50 +25,43 @@ public class Enemy : MonoBehaviour {
     public short health;
     public byte attackTypes;
 
+    private GameManager gameManager;
+
     void Awake () {
-        health = 0;
         attackTypes = (byte)AttackType.Main;
+    }
+
+    private void Start ()
+    {
+        gameManager = GameManager.instance;
+        gameManager.fxManager.PlayOnce(FM_FX.FX_Spawn, null, transform.position);
     }
     
 
-    void Update () {
-        
-    }
-
-    void Start () {
-        AnimPop();
-    }
-
-    void AnimPop () {
-
+    private void OnTriggerEnter(Collider collider)
+    {
+        if (collider.CompareTag("bullet"))
+            OnHit();
     }
 
     void AnimDie () {
-
-    }
-
-    void AnimHit () {
-
-    }
-
-    void AnimMiss () {
-
+        
+        gameManager.fxManager.PlayOnce(FM_FX.FX_Fireworks_Green_Small, null, transform.position);
+        //NICOLAS
+        //gameManager.soundManager.PlaySfx(SM_SFX)
+        Destroy(gameObject);
     }
 
     void LooseHealth () {
         if (--health <= 0) {
             AnimDie();
             onEnemyDie.Invoke(this);
-        } else {
-            AnimHit();
         }
     }
 
     public void OnHit (AttackType type = AttackType.Main) {
         if ((byte)type == attackTypes) {
             LooseHealth();
-        } else {
-            AnimMiss();
         }
     }
 

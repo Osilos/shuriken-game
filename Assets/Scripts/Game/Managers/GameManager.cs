@@ -1,4 +1,4 @@
-﻿﻿using System.Collections;
+﻿﻿﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -33,6 +33,9 @@ public class GameManager : MonoBehaviour {
     [Header("Timer")]
     [SerializeField] private Timer m_timer;
     [SerializeField] private float m_timerTotalTime;
+
+    public FXManager fxManager;
+    public SoundsManager soundManager;
 
     void Awake () {
 		if (instance == null) {

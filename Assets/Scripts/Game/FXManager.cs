@@ -45,8 +45,7 @@ public class FXManager: MonoBehaviour {
         l_Object.transform.parent   = p_Parent;
         l_Object.transform.position = p_Position;
         ParticleSystem l_FX         = l_Object.GetComponent<ParticleSystem>();
-        l_FX.loop                   = false;
-
+        
         StartCoroutine(PlayOnceCoroutine(l_FX));
     }
 
@@ -57,8 +56,7 @@ public class FXManager: MonoBehaviour {
         l_Object.transform.parent   = p_Parent;
         l_Object.transform.position = p_Position;
         ParticleSystem l_FX         = l_Object.GetComponent<ParticleSystem>();
-        l_FX.loop                   = true;
-
+        
         m_PlayingParticles.Add(l_Object.GetComponent<ParticleSystem>());
         return m_PlayingParticles.Count - 1;
     }
@@ -72,9 +70,7 @@ public class FXManager: MonoBehaviour {
 
     #region Utils
     private IEnumerator PlayOnceCoroutine(ParticleSystem p_FX) {
-        while (p_FX.isEmitting) {
-            yield return null;
-        }
+        yield return new WaitForSeconds(p_FX.main.startLifetime.constantMax + p_FX.main.duration);
 
         Destroy(p_FX.gameObject);
     }
@@ -85,5 +81,6 @@ public class FXManager: MonoBehaviour {
 public enum FM_FX {
     FX_Fireworks_Blue_Small,
     FX_Fireworks_Green_Small,
-    FX_Fireworks_Yellow_Small
+    FX_Fireworks_Yellow_Small,
+    FX_Spawn
 }
