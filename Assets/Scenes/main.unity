@@ -271,35 +271,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 223615741238564940, guid: 80241548392c2244a9181b0313f44812,
-        type: 2}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1436334955762316, guid: 80241548392c2244a9181b0313f44812, type: 2}
-      propertyPath: m_Layer
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 1162655832121166, guid: 80241548392c2244a9181b0313f44812, type: 2}
-      propertyPath: m_Layer
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 1683141546688040, guid: 80241548392c2244a9181b0313f44812, type: 2}
-      propertyPath: m_Layer
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 1052545741387190, guid: 80241548392c2244a9181b0313f44812, type: 2}
-      propertyPath: m_Layer
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 1598066576743402, guid: 80241548392c2244a9181b0313f44812, type: 2}
-      propertyPath: m_Layer
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 4685032810889160, guid: 80241548392c2244a9181b0313f44812, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 80241548392c2244a9181b0313f44812, type: 2}
   m_IsPrefabParent: 0
@@ -389,10 +360,6 @@ Prefab:
     - target: {fileID: 4755091891312946, guid: c85c6e3a3db1231409ecf7c8a23f91af, type: 2}
       propertyPath: m_RootOrder
       value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4755091891312946, guid: c85c6e3a3db1231409ecf7c8a23f91af, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c85c6e3a3db1231409ecf7c8a23f91af, type: 2}
@@ -530,6 +497,11 @@ Prefab:
       propertyPath: m_timer
       value: 
       objectReference: {fileID: 1310267801}
+    - target: {fileID: 114046641231160574, guid: 45174f49bb417174cb1a6a43db38ea61,
+        type: 2}
+      propertyPath: m_timerTotalTime
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 45174f49bb417174cb1a6a43db38ea61, type: 2}
   m_IsPrefabParent: 0

@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33635825636874452}
   - component: {fileID: 23401909796980004}
   - component: {fileID: 64133676712408264}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Asteroid_s_01 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,7 +58,7 @@ GameObject:
   - component: {fileID: 33522116964437240}
   - component: {fileID: 23598272807400482}
   - component: {fileID: 64968495769397534}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Cloud_Cumulus_Med (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 33401814947118530}
   - component: {fileID: 23618601686048624}
   - component: {fileID: 64202932420070788}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Tree_05_autumn_pal (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 33529016834989284}
   - component: {fileID: 23958814615976194}
   - component: {fileID: 64703374836360254}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Asteroid_s_01 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,7 +148,7 @@ GameObject:
   - component: {fileID: 33660304483347970}
   - component: {fileID: 23332360658889538}
   - component: {fileID: 64423767063561512}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Cloud_Cumulus_Med (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -184,7 +184,7 @@ GameObject:
   - component: {fileID: 33310339720441208}
   - component: {fileID: 23052206212517300}
   - component: {fileID: 64381519446877196}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Cloud_Cumulus_Med (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -202,7 +202,7 @@ GameObject:
   - component: {fileID: 33647117796890368}
   - component: {fileID: 23802460122137448}
   - component: {fileID: 64578142135445142}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Cloud_Cumulus_Med (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -238,7 +238,7 @@ GameObject:
   - component: {fileID: 33879408552832424}
   - component: {fileID: 23240019548475794}
   - component: {fileID: 64331540454013232}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Cloud_Cumulus_Med (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -256,7 +256,7 @@ GameObject:
   - component: {fileID: 33848671438828868}
   - component: {fileID: 23327371578303406}
   - component: {fileID: 64964656664603372}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Asteroid_s_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -328,7 +328,7 @@ GameObject:
   - component: {fileID: 33123518001956130}
   - component: {fileID: 65038381829867650}
   - component: {fileID: 23967551815610678}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: playerpoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -346,7 +346,7 @@ GameObject:
   - component: {fileID: 33157727534387832}
   - component: {fileID: 23283559071799568}
   - component: {fileID: 64764406079541204}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Cloud_Cumulus_Med (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -382,7 +382,7 @@ GameObject:
   - component: {fileID: 33541276551893978}
   - component: {fileID: 23834599636721462}
   - component: {fileID: 64201684517518152}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Tree_Pine_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -397,7 +397,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4001072773244712}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -451,7 +451,7 @@ GameObject:
   - component: {fileID: 33543545086308574}
   - component: {fileID: 23364450227800898}
   - component: {fileID: 64652801449908350}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Cloud_Cumulus_Med (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -469,7 +469,7 @@ GameObject:
   - component: {fileID: 33002170520158444}
   - component: {fileID: 23423018060433358}
   - component: {fileID: 64653963158788330}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: bush_2_winter_pal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -487,7 +487,7 @@ GameObject:
   - component: {fileID: 33541849341962422}
   - component: {fileID: 23212473239018644}
   - component: {fileID: 64455756326404788}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Cloud_Cumulus_Med (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -505,7 +505,7 @@ GameObject:
   - component: {fileID: 33694721031460534}
   - component: {fileID: 23689264205677074}
   - component: {fileID: 64231276808430008}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Cloud_Cumulus_Med (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -523,7 +523,7 @@ GameObject:
   - component: {fileID: 33923565504458458}
   - component: {fileID: 23095389411690660}
   - component: {fileID: 64221302226234590}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Asteroid_s_01 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -595,7 +595,7 @@ GameObject:
   - component: {fileID: 33671153322067564}
   - component: {fileID: 23357152762116438}
   - component: {fileID: 64866492861573660}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Tree_05_autumn_pal (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -613,7 +613,7 @@ GameObject:
   - component: {fileID: 33803361464668396}
   - component: {fileID: 23191364122428882}
   - component: {fileID: 64521028058924720}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Tree_Pine_02 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -631,7 +631,7 @@ GameObject:
   - component: {fileID: 33653979462304750}
   - component: {fileID: 23822841566717556}
   - component: {fileID: 64881597357538308}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Cloud_Cumulus_Med (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -646,7 +646,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4755091891312946}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: LD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -682,7 +682,7 @@ GameObject:
   - component: {fileID: 33527137406000138}
   - component: {fileID: 23306805321728872}
   - component: {fileID: 64773005890236916}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Tree_Pine_02 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -700,7 +700,7 @@ GameObject:
   - component: {fileID: 33720840212304460}
   - component: {fileID: 23514031258751520}
   - component: {fileID: 64431344493190992}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Tree_05_autumn_pal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -718,7 +718,7 @@ GameObject:
   - component: {fileID: 33400776428483822}
   - component: {fileID: 23941097047716220}
   - component: {fileID: 64083664424078810}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: bush_2_summer_pal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -736,7 +736,7 @@ GameObject:
   - component: {fileID: 33797203919958140}
   - component: {fileID: 23732683464327576}
   - component: {fileID: 64113624874368586}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Asteroid_s_01 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -788,7 +788,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4782634388657700}
   - component: {fileID: 108149967004261504}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Directional Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -824,7 +824,7 @@ GameObject:
   - component: {fileID: 33249771756610778}
   - component: {fileID: 23317119783045662}
   - component: {fileID: 64413368382329822}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Tree_05_autumn_pal (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -878,7 +878,7 @@ GameObject:
   - component: {fileID: 33614040678183934}
   - component: {fileID: 23070566639900276}
   - component: {fileID: 64875948065909852}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Cloud_Cumulus_Med (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -896,7 +896,7 @@ GameObject:
   - component: {fileID: 33342613314594506}
   - component: {fileID: 23112527161984738}
   - component: {fileID: 64480991626846462}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Asteroid_s_01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -968,7 +968,7 @@ GameObject:
   - component: {fileID: 33437669430732734}
   - component: {fileID: 23379332864224754}
   - component: {fileID: 64563768867481676}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Rock_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -986,7 +986,7 @@ GameObject:
   - component: {fileID: 33052145623391078}
   - component: {fileID: 23800513151061678}
   - component: {fileID: 64155838485356998}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Cloud_Cumulus_Med
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1004,7 +1004,7 @@ GameObject:
   - component: {fileID: 33236783623045030}
   - component: {fileID: 23263293624638396}
   - component: {fileID: 64350801919897312}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Rock_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1022,7 +1022,7 @@ GameObject:
   - component: {fileID: 33354552514048384}
   - component: {fileID: 23901049771462990}
   - component: {fileID: 64193716408777206}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: bush_2_spring_pal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1040,7 +1040,7 @@ GameObject:
   - component: {fileID: 33316931746832766}
   - component: {fileID: 23594385365450468}
   - component: {fileID: 64372958424913244}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Tree_01_summer_pal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1590,8 +1590,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1566731647744996}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.1615162, y: 1.247549, z: -1.7493093}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -1.7, y: 0.37, z: -2.96}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4782634388657700}
@@ -1649,7 +1649,7 @@ Transform:
   - {fileID: 4486741391805442}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!4 &4764953042251722
 Transform:
   m_ObjectHideFlags: 1
