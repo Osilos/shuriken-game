@@ -65,6 +65,7 @@ public class Wave : MonoBehaviour {
         int count = steps.Length;
         for (int i = 0; i < count; i++)
         {
+            yield return new WaitForSeconds(steps[i].time);
             ennemy = InstantiateEnemy();
 
             sphericalCoordinates.FromCartesian(steps[i].position);
@@ -72,7 +73,6 @@ public class Wave : MonoBehaviour {
 
             ennemy.gameObject.transform.position = sphericalCoordinates.toCartesian;
             ennemy.gameObject.transform.LookAt(origin);
-            yield return new WaitForSeconds(steps[i].time);
         }
 
         Destroy(gameObject);
