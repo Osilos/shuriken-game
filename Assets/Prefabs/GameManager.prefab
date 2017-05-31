@@ -20,6 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4543373980447788}
   - component: {fileID: 114046641231160574}
+  - component: {fileID: 114159459596140456}
+  - component: {fileID: 114336386026040862}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -33,7 +35,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1055895837483880}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -55,4 +57,28 @@ MonoBehaviour:
     type: 2}
   EnemyA: {fileID: 1574222106405954, guid: 43bd50d70276e72488d77bd45ba17e28, type: 2}
   EnemyB: {fileID: 1148861603612530, guid: 025f62a51c7572c47bcd18834262f4a5, type: 2}
+  fxManager: {fileID: 114159459596140456}
+  soundManager: {fileID: 114336386026040862}
   m_scoreGO: {fileID: 0}
+--- !u!114 &114159459596140456
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1055895837483880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d8d9ceac96aef542bebaf6ec7762979, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114336386026040862
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1055895837483880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cd090916d2664846bf6e21711656ff6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
