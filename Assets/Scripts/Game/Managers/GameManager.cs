@@ -53,6 +53,7 @@ public class GameManager : MonoBehaviour {
 		}
 
         m_timer.onTimerEnd.AddListener(OnTimeUp);
+        Enemy.onEnemyDie.AddListener(OnEnemyDie);
     }
     
 

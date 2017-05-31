@@ -9,7 +9,7 @@ public class OnEnemyDieEvent : UnityEvent<Enemy> { }
 public class Enemy : MonoBehaviour {
     
 
-    public OnEnemyDieEvent onEnemyDie = new OnEnemyDieEvent();
+    public static OnEnemyDieEvent onEnemyDie = new OnEnemyDieEvent();
 
     [SerializeField]
     private float m_scorePoints = 10;
