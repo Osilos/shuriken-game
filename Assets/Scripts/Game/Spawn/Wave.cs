@@ -11,7 +11,7 @@ public class Wave : MonoBehaviour {
 
     public static Wave Create ()
     {
-        return Instantiate(new GameObject()).AddComponent<Wave>();
+        return new GameObject("Wave").AddComponent<Wave>();
     }
 
     public Wave SetOrigin(Vector3 position)

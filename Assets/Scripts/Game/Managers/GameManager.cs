@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour {
 	static Wave m_waveManager;
 
 	[Header("Enemies")]
-	public Enemy PrefabEnemy;
+	public Ennemy PrefabEnemy;
 	public GameObject EnemyA;
 	public GameObject EnemyB;
 
@@ -24,16 +24,6 @@ public class GameManager : MonoBehaviour {
 		}
 
 		mainCamera = Camera.main;
-		Wave.Create()
-			.SetOrigin(Vector3.zero)
-			.SetEnemyPrefab(EnemyA)
-			.SetSteps(
-				new StepWave[3] {
-					new StepWave(new Vector3(0f,0f,5f), 0f),
-					new StepWave(new Vector3(-5f,0f, 5f), 0.5f),
-					new StepWave(new Vector3(5f,0f,5f), 0f)
-				}
-			);
 	}
 
 	// Use this for initialization

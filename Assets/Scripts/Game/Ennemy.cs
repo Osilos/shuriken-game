@@ -2,11 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour {
+public class Ennemy : MonoBehaviour {
     
-    public Transform body;
-    [SerializeField]
-    private Animator m_animator;
 
     public short health;
     public byte attackTypes;
