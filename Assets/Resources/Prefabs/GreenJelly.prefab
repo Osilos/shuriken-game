@@ -92,7 +92,7 @@ Animator:
   m_GameObject: {fileID: 1574222106405954}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 5f7ddeb4b3250a848995669baa3880c4, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d9d9dd2cbfdf5384f9db7e611b1bf3e5, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_scorePoints: 10
-  health: 0
+  health: 1
   attackTypes: 0
 --- !u!135 &135585797962462750
 SphereCollider:
@@ -121,7 +121,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1574222106405954}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5069138

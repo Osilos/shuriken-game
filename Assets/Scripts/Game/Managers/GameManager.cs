@@ -15,8 +15,10 @@ public class GameManager : MonoBehaviour {
 	public Ennemy PrefabEnemy;
 	public GameObject EnemyA;
 	public GameObject EnemyB;
+    public FXManager fxManager;
+    public SoundsManager soundManager;
 
-	[Header("Score")]
+    [Header("Score")]
 	[SerializeField] private Score3D m_scoreGO;
 
 	void Awake () {

@@ -25,9 +25,16 @@ public class Ennemy : MonoBehaviour {
     public short health;
     public byte attackTypes;
 
+    private GameManager gameManager;
+
     void Awake () {
-        health = 0;
         attackTypes = (byte)AttackType.Main;
+    }
+
+    private void Start ()
+    {
+        gameManager = GameManager.instance;
+        gameManager.fxManager.PlayOnce(FM_FX.FX_Spawn, null, transform.position);
     }
     
 
@@ -37,44 +44,24 @@ public class Ennemy : MonoBehaviour {
             OnHit();
     }
 
-    void Update () {
-        
-    }
-
-    void Start () {
-        AnimPop();
-    }
-
-    void AnimPop () {
-
-    }
-
     void AnimDie () {
-        Destroy(gameObject);
-    }
-
-    void AnimHit () {
         
-    }
-
-    void AnimMiss () {
-
+        gameManager.fxManager.PlayOnce(FM_FX.FX_Fireworks_Green_Small, null, transform.position);
+        //NICOLAS
+        //gameManager.soundManager.PlaySfx(SM_SFX)
+        Destroy(gameObject);
     }
 
     void LooseHealth () {
         if (--health <= 0) {
             AnimDie();
             onEnemyDie.Invoke(this);
-        } else {
-            AnimHit();
         }
     }
 
     public void OnHit (AttackType type = AttackType.Main) {
         if ((byte)type == attackTypes) {
             LooseHealth();
-        } else {
-            AnimMiss();
         }
     }
 

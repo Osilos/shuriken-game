@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_scorePoints: 10
-  health: 0
+  health: 1
   attackTypes: 0
 --- !u!135 &135751200160331432
 SphereCollider:
