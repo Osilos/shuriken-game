@@ -11,6 +11,22 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1659692310339372}
   m_IsPrefabParent: 1
+--- !u!1 &1017763853522114
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4046628546747600}
+  - component: {fileID: 65879872955176260}
+  m_Layer: 0
+  m_Name: TargetCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
 --- !u!1 &1094940467941760
 GameObject:
   m_ObjectHideFlags: 0
@@ -43,6 +59,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1494612409477058
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4779467353549196}
+  - component: {fileID: 65747304308952508}
+  m_Layer: 0
+  m_Name: GrabCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1659692310339372
 GameObject:
   m_ObjectHideFlags: 0
@@ -52,7 +84,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4076656437073378}
   - component: {fileID: 114900953962910682}
-  - component: {fileID: 65160831780338948}
   - component: {fileID: 54846512940172938}
   m_Layer: 0
   m_Name: Shuriken
@@ -106,6 +137,19 @@ Transform:
   m_Father: {fileID: 4076656437073378}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4046628546747600
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1017763853522114}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4076656437073378}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4076656437073378
 Transform:
   m_ObjectHideFlags: 1
@@ -113,10 +157,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1659692310339372}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.0613583, y: 0, z: -0.32906544}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4033754258300944}
+  - {fileID: 4779467353549196}
+  - {fileID: 4046628546747600}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -147,6 +193,19 @@ Transform:
   m_Father: {fileID: 4033754258300944}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4779467353549196
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1494612409477058}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3.871106, y: 3.8711064, z: 3.8711064}
+  m_Children: []
+  m_Father: {fileID: 4076656437073378}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4808138179326772
 Transform:
   m_ObjectHideFlags: 1
@@ -175,12 +234,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &65160831780338948
+--- !u!65 &65747304308952508
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1659692310339372}
+  m_GameObject: {fileID: 1494612409477058}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.09802877, y: 0.11630607, z: 0.054550394}
+  m_Center: {x: -0.0011344515, y: -0.002884388, z: 0.004738964}
+--- !u!65 &65879872955176260
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1017763853522114}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
@@ -216,12 +287,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_allowOffhandGrab: 1
-  m_snapPosition: 0
-  m_snapOrientation: 0
+  m_snapPosition: 1
+  m_snapOrientation: 1
   m_snapOffset: {fileID: 0}
   m_grabPoints:
-  - {fileID: 65160831780338948}
+  - {fileID: 65747304308952508}
   m_TimeBeforeDestroy: 10
+  m_TargetCollider: {fileID: 1017763853522114}
+  m_GrabCollider: {fileID: 1494612409477058}
 --- !u!137 &137223960868374280
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
