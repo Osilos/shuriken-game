@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 95210829454987884}
   - component: {fileID: 135751200160331432}
   - component: {fileID: 114314653405905974}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: RedJelly
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +121,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1148861603612530}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5069138
