@@ -53,13 +53,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae0596f7759f83e4a811be0ce04507c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onGameOver:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
   PrefabEnemy: {fileID: 114092069848904580, guid: ddd16a8eebe689e439c204d638c45225,
     type: 2}
   EnemyA: {fileID: 1574222106405954, guid: 43bd50d70276e72488d77bd45ba17e28, type: 2}
   EnemyB: {fileID: 1148861603612530, guid: 025f62a51c7572c47bcd18834262f4a5, type: 2}
+  m_scoreGO: {fileID: 0}
+  m_timer: {fileID: 0}
+  m_timerTotalTime: 0
   fxManager: {fileID: 114159459596140456}
   soundManager: {fileID: 114336386026040862}
-  m_scoreGO: {fileID: 0}
 --- !u!114 &114159459596140456
 MonoBehaviour:
   m_ObjectHideFlags: 1

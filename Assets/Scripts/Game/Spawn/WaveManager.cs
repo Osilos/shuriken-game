@@ -20,6 +20,11 @@ public class WaveManager : MonoBehaviour {
 
     private void Play ()
     {
+        StartCoroutine(PlayRoutine());
+    }
+
+    private IEnumerator PlayRoutine ()
+    {
         if (wavesToPlay.Count == 0)
             wavesToPlay = new List<List<StepWave>>(waves);
 
@@ -27,6 +32,8 @@ public class WaveManager : MonoBehaviour {
         List<StepWave> wave = wavesToPlay[0];
         wavesToPlay.Remove(wave);
         PlayWave(wave);
+        yield return new WaitForSeconds(wave.Select(x => x.timeBeforeSpawn).ToList().Sum());
+        Play();
     }
 
     private void PlayWave (List<StepWave> steps)
