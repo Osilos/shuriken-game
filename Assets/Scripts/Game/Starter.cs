@@ -17,9 +17,10 @@ public class Starter : MonoBehaviour {
     }
 	
 	
-    void OnCollisionEnter ()
+    void OnCollisionEnter (Collision coll)
     {
         GameManager.instance.PlayerWantToRestart();
+        m_cachedBody.AddForce(coll.relativeVelocity, ForceMode.Impulse);
     }
 
 
