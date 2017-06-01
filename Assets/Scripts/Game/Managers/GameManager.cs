@@ -56,6 +56,14 @@ public class GameManager : MonoBehaviour {
         Enemy.onEnemyDie.AddListener(OnEnemyDie);
     }
     
+    private void Update ()
+    {
+        if (Input.GetButtonUp("Button A"))
+        {
+            OVRManager.display.RecenterPose();
+            print("RESET");
+        }
+    }
 
 	private void GameStart ()
     {
@@ -63,6 +71,7 @@ public class GameManager : MonoBehaviour {
         m_scoreManager.ResetScore();
         m_timer.LaunchTimer(m_timerTotalTime);
         waveManager.Play();
+
         soundManager.PlayMusic((SM_Musics)Random.Range(0, 10));
     }
 
