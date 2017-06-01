@@ -67,6 +67,8 @@ public class Shuriken : OVRGrabbable {
 
         //P'tet check que la velocite est assez importante avant de lancer le son
         GameManager.instance.soundManager.PlaySfx((SM_SFX)UnityEngine.Random.Range(0, 4));
+
+        SetModeLaunched();
     }
 
     private void Destroy ()
@@ -93,5 +95,20 @@ public class Shuriken : OVRGrabbable {
         transform.position = m_SnapTransform.position;
         transform.rotation = m_SnapTransform.rotation;
     }
+
+    private void SetModeLaunched()
+    {
+
+    }
+
+    private void DoActionLaunched()
+    {
+        Rigidbody l_ShurikenRB = GetComponent<Rigidbody>();
+        if (l_ShurikenRB)
+        {
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(l_ShurikenRB.velocity), Time.deltaTime);
+        }
+    }
+
     #endregion
 }
