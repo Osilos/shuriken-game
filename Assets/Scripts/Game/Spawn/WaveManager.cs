@@ -28,6 +28,7 @@ public class WaveManager : MonoBehaviour {
 
     public void Play ()
     {
+        numberEnemy = 0;
         Enemy.onEnemyDie.AddListener(OnEnemyDestroy);
         PlayRoutine();
     }
