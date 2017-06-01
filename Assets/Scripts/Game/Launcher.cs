@@ -23,7 +23,7 @@ public class Launcher : MonoBehaviour {
 
             item.useGravity = false;
             
-            speedFactor *= 4f;
+            speedFactor *= 3f;
             
             //StartCoroutine( DoLaunch( item.gameObject, hit.collider.transform.position, hit.distance * speedFactor ) );
 
