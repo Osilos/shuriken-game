@@ -31,6 +31,7 @@ public class ScoreManager
     public ScoreManager(Score3D scoreGO)
     {
         m_scoreFeedback = scoreGO;
+        GameManager.instance.onGameOver.AddListener(ShowScore);
     }
 
 
@@ -47,6 +48,13 @@ public class ScoreManager
     {
         m_currentScore = 0;
         m_scoreFeedback.SetScore(m_currentScore);
+        m_scoreFeedback.ReturnToInitialPosition();
+    }
+
+
+    private void ShowScore ()
+    {
+        m_scoreFeedback.ShowToPlayer();
     }
 
 }
