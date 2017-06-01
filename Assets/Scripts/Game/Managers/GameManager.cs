@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour {
     
 	static ScoreManager m_scoreManager;
 
-    private GameState m_state;
+    private GameState m_state = GameState.WAITING;
 
     public UnityEvent onGameOver = new UnityEvent();
 
