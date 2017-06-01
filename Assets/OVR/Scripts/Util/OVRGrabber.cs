@@ -21,6 +21,7 @@ limitations under the License.
 
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 /// <summary>
 /// Allows grabbing and throwing of objects with the OVRGrabbable component on them.
@@ -66,6 +67,9 @@ public class OVRGrabber : MonoBehaviour
     Quaternion m_grabbedObjectRotOff;
 	protected Dictionary<OVRGrabbable, int> m_grabCandidates = new Dictionary<OVRGrabbable, int>();
 	protected bool operatingWithoutOVRCameraRig = true;
+
+    private List<Vector3> directions = new List<Vector3>();
+    private int maxCount = 30;
 
     /// <summary>
     /// The currently grabbed object.
@@ -321,6 +325,10 @@ public class OVRGrabber : MonoBehaviour
             grabbedRigidbody.MovePosition(grabbablePosition);
             grabbedRigidbody.MoveRotation(grabbableRotation);
         }
+
+        if (directions.Count > maxCount)
+            directions.RemoveAt(0);
+        directions.Add(OVRInput.GetLocalControllerVelocity(m_controller).normalized);
     }
 
     protected void GrabEnd()
@@ -332,8 +340,15 @@ public class OVRGrabber : MonoBehaviour
             localPose = localPose * offsetPose;
 
 			OVRPose trackingSpace = transform.ToOVRPose() * localPose.Inverse();
-			Vector3 linearVelocity = trackingSpace.orientation * OVRInput.GetLocalControllerVelocity(m_controller);
-			Vector3 angularVelocity = trackingSpace.orientation * OVRInput.GetLocalControllerAngularVelocity(m_controller);
+
+            Vector3 linearVelocity = Vector3.zero;
+            directions.ForEach(x => linearVelocity += x);
+            linearVelocity /= directions.Count;
+            //Grosse bite d'ours
+
+            linearVelocity = trackingSpace.orientation * linearVelocity;
+            //Vector3 linearVelocity = trackingSpace.orientation * OVRInput.GetLocalControllerVelocity(m_controller);
+            Vector3 angularVelocity = trackingSpace.orientation * OVRInput.GetLocalControllerAngularVelocity(m_controller);
 
             GrabbableRelease(linearVelocity, angularVelocity);
         }
