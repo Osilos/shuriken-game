@@ -58,12 +58,8 @@ public class Shuriken : OVRGrabbable {
             m_TrailGO.SetActive(true);
 
         Rigidbody l_ShurikenRB = GetComponent<Rigidbody>();
-        if (l_ShurikenRB)
-        {
-            l_ShurikenRB.isKinematic = false;
-            l_ShurikenRB.useGravity = true;
-            l_ShurikenRB.constraints = RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
-            l_ShurikenRB.AddForce(linearVelocity * m_handSpeedMultiplier, ForceMode.Impulse);
+        if (l_ShurikenRB) {
+            Launcher.Launch( l_ShurikenRB, linearVelocity, m_handSpeedMultiplier, LayerMask.NameToLayer("Enemy") );
         }
 
         //P'tet check que la velocite est assez importante avant de lancer le son
