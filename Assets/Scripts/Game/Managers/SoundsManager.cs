@@ -9,7 +9,7 @@ public class SoundsManager: MonoBehaviour {
     private const float GENERAL_VOLUME  = 1.0f;
 
     #region SFX
-    private const string PATH_SFX       = "";
+    private const string PATH_SFX       = "SFX/";
     private const int NB_SOURCES_SFX    = 10;
     private const float SFX_VOLUME      = 0.5f;
 
@@ -18,7 +18,7 @@ public class SoundsManager: MonoBehaviour {
     #endregion
 
     #region Musics
-    private const string PATH_MUSICS    = "";
+    private const string PATH_MUSICS    = "Musics/";
     private const int NB_SOURCES_MUSICS = 2;
     private const float MUSICS_VOLUME   = 0.5f;
     private const float m_FadeDuration  = 2.0f;
@@ -147,7 +147,26 @@ public class SoundsManager: MonoBehaviour {
 }
 
 public enum SM_SFX {
-
+    shuriken_1,
+    shuriken_2,
+    shuriken_3,
+    shuriken_4,
+    enemy_pop_1,
+    enemy_pop_2,
+    enemy_die_1,
+    enemy_move_1,
+    enemy_move_2
+    //ambiance_1,
+    //ambiance_2,
+    //bonus_1,
+    //bonus_2,
+    //bonus_3,
+    //enemy_hurt_1,
+    //random_1,
+    //random_2,
+    //random_3,
+    //random_4,
+    //random_5
 }
 
 public enum SM_Musics {
