@@ -36,6 +36,8 @@ public class Shuriken : OVRGrabbable {
             m_TrailGO.SetActive(false);
         if (m_GrabCollider)
             m_GrabCollider.SetActive(true);
+
+        SetModeLaunched();
     }
 
     private void Update()
@@ -104,6 +106,15 @@ public class Shuriken : OVRGrabbable {
     private void SetModeLaunched()
     {
         doAction = DoActionLaunched;
+        m_TargetCollider.SetActive(true);
+        m_GrabCollider.SetActive(false);
+
+        Rigidbody l_ShurikenRB = GetComponent<Rigidbody>();
+        if (l_ShurikenRB)
+        {
+            l_ShurikenRB.isKinematic = false;
+        }
+        
     }
 
     private void DoActionLaunched()
@@ -111,13 +122,18 @@ public class Shuriken : OVRGrabbable {
         Rigidbody l_ShurikenRB = GetComponent<Rigidbody>();
         if (l_ShurikenRB)
         {
-            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(l_ShurikenRB.velocity), Time.deltaTime);
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(l_ShurikenRB.velocity), Vector3.Magnitude(l_ShurikenRB.velocity) / 10);
         }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        SetModeVoid();    
+        SetModeVoid();
+        Rigidbody l_ShurikenRB = GetComponent<Rigidbody>();
+        if (l_ShurikenRB)
+        {
+            l_ShurikenRB.isKinematic = true;
+        }
     }
 
     #endregion
