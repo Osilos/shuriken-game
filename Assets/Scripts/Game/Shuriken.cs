@@ -8,6 +8,9 @@ public class Shuriken : OVRGrabbable {
     public Action<Shuriken> OnGrabStart;
     public Action<Shuriken> OnGrabEnd;
 
+    private Action doAction;
+    private Transform m_SnapTransform;
+
     [SerializeField]
     private float m_TimeBeforeDestroy = 10f;
 
@@ -26,6 +29,7 @@ public class Shuriken : OVRGrabbable {
     
     // Use this for initialization
     void Start () {
+        SetModeVoid();
         if (m_TargetCollider)
             m_TargetCollider.SetActive(false);
         if (m_TrailGO)
@@ -37,15 +41,14 @@ public class Shuriken : OVRGrabbable {
     public override void GrabBegin(OVRGrabber hand, Collider grabPoint)
     {
         if(OnGrabStart != null) OnGrabStart(this);
-        Transform l_SnapTransform = hand.transform.Find("Snap");
-        if(l_SnapTransform)
-            snapOffset = l_SnapTransform;
+        SetModeGrabbed(hand.transform.Find("Snap"));
         base.GrabBegin(hand, grabPoint);
-        transform.SetParent(null);
     }
 
     public override void GrabEnd(Vector3 linearVelocity, Vector3 angularVelocity)
     {
+        SetModeVoid();
+
         if (OnGrabEnd != null) OnGrabEnd(this);
         base.GrabEnd(linearVelocity, angularVelocity);
         Invoke("Destroy", m_TimeBeforeDestroy);
@@ -74,5 +77,25 @@ public class Shuriken : OVRGrabbable {
     {
         Destroy(gameObject);
     }
-    
+
+    #region StateMachine
+    private void SetModeVoid()
+    {
+        doAction = DoActionVoid;
+    }
+
+    private void SetModeGrabbed(Transform p_SnapTransform)
+    {
+        doAction = DoActionGrabbed;
+        m_SnapTransform = p_SnapTransform;
+    }
+
+    private void DoActionVoid() {  }
+
+    private void DoActionGrabbed()
+    {
+        transform.position = m_SnapTransform.position;
+        transform.rotation = m_SnapTransform.rotation;
+    }
+    #endregion
 }
