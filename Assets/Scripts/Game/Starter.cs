@@ -4,12 +4,19 @@ using UnityEngine;
 
 public class Starter : MonoBehaviour {
 
+    [SerializeField]
+    private float m_resetTime = 3;
+
     private Vector3 m_initialPosition;
     private Quaternion m_initialRotation;
     private Rigidbody m_cachedBody;
 
-	// Use this for initialization
+    private bool m_reseting = false;
+
+    
+
 	void Awake () {
+        m_reseting = false;
         m_initialRotation = transform.rotation;
         m_initialPosition = transform.position;
         m_cachedBody      = GetComponent<Rigidbody>();
@@ -19,16 +26,41 @@ public class Starter : MonoBehaviour {
 
     void OnCollisionEnter (Collision coll)
     {
-        GameManager.instance.PlayerWantToRestart();
-        m_cachedBody.AddForce(coll.relativeVelocity * 10, ForceMode.Impulse);
+        if (!m_reseting)
+        {
+            GameManager.instance.PlayerWantToRestart();
+            m_cachedBody.AddForce(coll.relativeVelocity * 10, ForceMode.Impulse);
+        }
     }
 
 
     void Reset ()
     {
+        m_reseting = true;
         m_cachedBody.velocity = Vector3.zero;
         m_cachedBody.angularVelocity = Vector3.zero;
-        transform.position    = m_initialPosition;
-        transform.rotation    = m_initialRotation;
+        StartCoroutine(CoroutineReset());
+    }
+
+
+    IEnumerator CoroutineReset ()
+    {
+        float startTime = Time.time;
+        float endTime   = Time.time + m_resetTime;
+        Vector3 startPosition    = transform.position;
+        Quaternion startRotation = transform.rotation;
+
+        while (Time.time < endTime)
+        {
+            float timeSpent = Time.time - startTime;
+            float percent   = timeSpent / m_resetTime;
+
+            transform.position = Vector3.Lerp(startPosition, m_initialPosition, percent);
+            transform.rotation = Quaternion.Slerp(startRotation, m_initialRotation, percent);
+
+            yield return null;
+        }
+
+        m_reseting = false;
     }
 }

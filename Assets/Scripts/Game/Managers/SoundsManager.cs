@@ -113,10 +113,13 @@ public class SoundsManager: MonoBehaviour {
 		if (l_AudioSource) l_AudioSource.PlayOneShot(m_SFXDictionary[p_Sfx], SFX_VOLUME * GENERAL_VOLUME);
 	}
 
-    public void PlaySFXOnTarget(SM_SFX p_Sfx, GameObject p_Target) {
+    public void PlaySFXOnTarget(SM_SFX p_Sfx, Vector3 p_Target) {
         if (!m_SFXDictionary.ContainsKey(p_Sfx)) return;
 
-        AudioSource l_AudioSource   = p_Target.AddComponent<AudioSource>();
+        GameObject l_Obj            = new GameObject();
+        l_Obj.transform.position    = p_Target;
+
+        AudioSource l_AudioSource   = l_Obj.AddComponent<AudioSource>();
         l_AudioSource.loop          = false;
         l_AudioSource.playOnAwake   = false;
         l_AudioSource.PlayOneShot(m_SFXDictionary[p_Sfx], SFX_VOLUME * GENERAL_VOLUME);
@@ -163,19 +166,20 @@ public enum SM_SFX {
     enemy_pop_1,
     enemy_pop_2,
     enemy_die_1,
-    enemy_move_1,
-    enemy_move_2,
+    //enemy_hurt_1,
     //ambiance_1,
     //ambiance_2,
-    //bonus_1,
-    //bonus_2,
-    //bonus_3,
-    //enemy_hurt_1,
-    //random_1,
-    //random_2,
-    //random_3,
-    //random_4,
-    //random_5,
+    //ambiance_3,
+    //ambiance_4,
+    //ambiance_5,
+    //ambiance_6,
+    //ambiance_7,
+    //ambiance_8,
+    //ambiance_9,
+    //ambiance_10,
+    //ambiance_11,
+    //ambiance_12,
+    //ambiance_13,
     bullet_hit_wood,
     bullet_hit_rock,
     bullet_hit_dirt,
@@ -183,5 +187,13 @@ public enum SM_SFX {
 }
 
 public enum SM_Musics {
-
+    short_level_1,
+    short_level_2,
+    short_level_3,
+    short_level_4,
+    short_level_5,
+    short_level_6,
+    short_level_7,
+    short_level_8,
+    short_level_9,
 }
