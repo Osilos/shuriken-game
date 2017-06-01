@@ -32,8 +32,7 @@ public class Timer : MonoBehaviour {
 
         while (Time.time < endTime)
         {
-            float timeSpent = Time.time - startTime;
-            float timeLeft  = endTime   - timeSpent;
+            float timeLeft  = endTime   - Time.time;
             float percent   = timeLeft / totalTime;
             SetTimerFeedback(percent);
 
