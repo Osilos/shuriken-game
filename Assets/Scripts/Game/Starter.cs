@@ -22,9 +22,13 @@ public class Starter : MonoBehaviour {
         m_initialPosition = transform.position;
         m_cachedBody      = GetComponent<Rigidbody>();
         m_cachedCollider  = GetComponent<SphereCollider>();
+    }
+
+    private void Start()
+    {
         GameManager.instance.onGameOver.AddListener(Reset);
     }
-	
+
 
     void OnCollisionEnter (Collision coll)
     {
