@@ -67,6 +67,8 @@ public class Shuriken : OVRGrabbable {
             l_ShurikenRB.useGravity = true;
             l_ShurikenRB.constraints = RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
             l_ShurikenRB.AddForce(linearVelocity * m_handSpeedMultiplier, ForceMode.Impulse);
+            var rotation = Quaternion.LookRotation(linearVelocity.normalized);
+            l_ShurikenRB.transform.rotation = rotation;
         }
 
         //P'tet check que la velocite est assez importante avant de lancer le son
