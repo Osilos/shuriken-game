@@ -23,6 +23,7 @@ public class Shuriken : OVRGrabbable {
     [SerializeField]
     private float m_handSpeedMultiplier;
 
+    
     // Use this for initialization
     void Start () {
         if (m_TargetCollider)
@@ -64,8 +65,10 @@ public class Shuriken : OVRGrabbable {
             l_ShurikenRB.constraints = RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
             l_ShurikenRB.AddForce(linearVelocity * m_handSpeedMultiplier, ForceMode.Impulse);
         }
-    }
 
+        //P'tet check que la velocite est assez importante avant de lancer le son
+        GameManager.instance.soundManager.PlaySfx((SM_SFX)UnityEngine.Random.Range(0, 4));
+    }
 
     private void Destroy ()
     {
