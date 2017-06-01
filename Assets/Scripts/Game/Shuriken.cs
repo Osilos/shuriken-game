@@ -50,12 +50,7 @@ public class Shuriken: OVRGrabbable {
 
         Rigidbody l_ShurikenRB = GetComponent<Rigidbody>();
         if (l_ShurikenRB) {
-            l_ShurikenRB.isKinematic = false;
-            l_ShurikenRB.useGravity = true;
-            l_ShurikenRB.constraints = RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
-            l_ShurikenRB.AddForce(linearVelocity * m_handSpeedMultiplier, ForceMode.Impulse);
-            var rotation = Quaternion.LookRotation(linearVelocity.normalized);
-            l_ShurikenRB.transform.rotation = rotation;
+            Launcher.Launch(l_ShurikenRB, linearVelocity, m_handSpeedMultiplier, LayerMask.NameToLayer("Enemy") );
         }
         
         if (linearVelocity.magnitude > m_SoundLimit) GameManager.instance.soundManager.PlaySfx((SM_SFX)UnityEngine.Random.Range(0, 4));

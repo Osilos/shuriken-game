@@ -18,7 +18,7 @@ public class Launcher : MonoBehaviour {
         item.constraints = RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
         
         RaycastHit hit;
-        Debug.DrawRay( item.transform.position, linearVelocity.normalized * 20f, Color.red, 10f );
+        //Debug.DrawRay( item.transform.position, linearVelocity.normalized * 20f, Color.red, 10f );
         if (Physics.Raycast( item.transform.position, linearVelocity, out hit, 20f )) {
 
             item.useGravity = false;
