@@ -11,7 +11,7 @@ public class SoundsManager: MonoBehaviour {
     #region SFX
     private const string PATH_SFX       = "SFX/";
     private const int NB_SOURCES_SFX    = 4;
-    private const float SFX_VOLUME      = 0.5f;
+    private const float SFX_VOLUME      = 1f;
 
     private List<AudioSource> m_SFXSources;
     private Dictionary<SM_SFX, AudioClip> m_SFXDictionary;
@@ -20,7 +20,7 @@ public class SoundsManager: MonoBehaviour {
     #region Musics
     private const string PATH_MUSICS    = "Musics/";
     private const int NB_SOURCES_MUSICS = 2;
-    private const float MUSICS_VOLUME   = 0.5f;
+    private const float MUSICS_VOLUME   = 0.25f;
     private const float m_FadeDuration  = 2.0f;
 
     private List<AudioSource> m_MusicsSources;

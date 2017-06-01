@@ -64,6 +64,9 @@ public class Starter : MonoBehaviour {
             yield return null;
         }
 
+        transform.position = m_initialPosition;
+        transform.rotation = m_initialRotation;
+
         m_reseting = false;
         m_cachedCollider.enabled = true;
     }
