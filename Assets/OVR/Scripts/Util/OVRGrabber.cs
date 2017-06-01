@@ -341,13 +341,13 @@ public class OVRGrabber : MonoBehaviour
 
 			OVRPose trackingSpace = transform.ToOVRPose() * localPose.Inverse();
 
-            Vector3 linearVelocity = Vector3.zero;
-            directions.ForEach(x => linearVelocity += x);
-            linearVelocity /= directions.Count;
+            //Vector3 linearVelocity = Vector3.zero;
+            //directions.ForEach(x => linearVelocity += x);
+            //linearVelocity /= directions.Count;
             //Grosse bite d'ours
 
-            linearVelocity = trackingSpace.orientation * linearVelocity;
-            //Vector3 linearVelocity = trackingSpace.orientation * OVRInput.GetLocalControllerVelocity(m_controller);
+            //linearVelocity = trackingSpace.orientation * linearVelocity;
+            Vector3 linearVelocity = trackingSpace.orientation * OVRInput.GetLocalControllerVelocity(m_controller);
             Vector3 angularVelocity = trackingSpace.orientation * OVRInput.GetLocalControllerAngularVelocity(m_controller);
 
             GrabbableRelease(linearVelocity, angularVelocity);

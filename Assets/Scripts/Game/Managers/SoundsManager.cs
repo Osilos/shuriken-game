@@ -52,7 +52,7 @@ public class SoundsManager: MonoBehaviour {
         Array l_Names   = Enum.GetValues(typeof(SM_SFX));
         
         foreach (SM_SFX l_Name in l_Names) {
-            AudioClip l_SFX = Resources.Load<AudioClip>(PATH_SFX + l_Name.ToString());
+            AudioClip l_SFX = Resources.Load<AudioClip>(PATH_SOUNDS + PATH_SFX + l_Name.ToString());
             if (l_SFX == null) Debug.LogError("SoundsManager: " + PATH_SFX + l_Name.ToString() + " not found.");
             m_SFXDictionary.Add(l_Name, l_SFX);
         }
@@ -76,7 +76,7 @@ public class SoundsManager: MonoBehaviour {
         Array l_Names       = Enum.GetValues(typeof(SM_Musics));
 
         foreach (SM_Musics l_Name in l_Names) {
-            AudioClip l_Music = Resources.Load<AudioClip>(PATH_MUSICS + l_Name.ToString());
+            AudioClip l_Music = Resources.Load<AudioClip>(PATH_SOUNDS + PATH_MUSICS + l_Name.ToString());
             if (l_Music == null) Debug.LogError("SoundsManager: " + PATH_MUSICS + l_Name.ToString() + " not found.");
             m_MusicsDictionary.Add(l_Name, l_Music);
         }
