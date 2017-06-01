@@ -52,8 +52,8 @@ public class SoundsManager: MonoBehaviour {
         Array l_Names   = Enum.GetValues(typeof(SM_SFX));
         
         foreach (SM_SFX l_Name in l_Names) {
-            AudioClip l_SFX = Resources.Load<AudioClip>(PATH_SFX + l_Name.ToString());
-            if (l_SFX == null) Debug.LogError("SoundsManager: " + PATH_SFX + l_Name.ToString() + " not found.");
+            AudioClip l_SFX = Resources.Load<AudioClip>(PATH_SOUNDS + PATH_SFX + l_Name.ToString());
+            if (l_SFX == null) Debug.LogError("SoundsManager: " + PATH_SOUNDS + PATH_SFX + l_Name.ToString() + " not found.");
             m_SFXDictionary.Add(l_Name, l_SFX);
         }
         #endregion
@@ -76,8 +76,8 @@ public class SoundsManager: MonoBehaviour {
         Array l_Names       = Enum.GetValues(typeof(SM_Musics));
 
         foreach (SM_Musics l_Name in l_Names) {
-            AudioClip l_Music = Resources.Load<AudioClip>(PATH_MUSICS + l_Name.ToString());
-            if (l_Music == null) Debug.LogError("SoundsManager: " + PATH_MUSICS + l_Name.ToString() + " not found.");
+            AudioClip l_Music = Resources.Load<AudioClip>(PATH_SOUNDS + PATH_MUSICS + l_Name.ToString());
+            if (l_Music == null) Debug.LogError("SoundsManager: " + PATH_SOUNDS + PATH_MUSICS + l_Name.ToString() + " not found.");
             m_MusicsDictionary.Add(l_Name, l_Music);
         }
         #endregion
@@ -110,7 +110,8 @@ public class SoundsManager: MonoBehaviour {
         if (!m_SFXDictionary.ContainsKey(p_Sfx)) return;
 
         AudioSource l_AudioSource = m_SFXSources.Find(item => !item.isPlaying);
-		if (l_AudioSource) l_AudioSource.PlayOneShot(m_SFXDictionary[p_Sfx], SFX_VOLUME * GENERAL_VOLUME);
+        l_AudioSource.spatialBlend = 1.0f;
+        if (l_AudioSource) l_AudioSource.PlayOneShot(m_SFXDictionary[p_Sfx], SFX_VOLUME * GENERAL_VOLUME);
 	}
 
     public void PlaySFXOnTarget(SM_SFX p_Sfx, Vector3 p_Target) {
@@ -120,6 +121,7 @@ public class SoundsManager: MonoBehaviour {
         l_Obj.transform.position    = p_Target;
 
         AudioSource l_AudioSource   = l_Obj.AddComponent<AudioSource>();
+        l_AudioSource.spatialBlend  = 1.0f;
         l_AudioSource.loop          = false;
         l_AudioSource.playOnAwake   = false;
         l_AudioSource.PlayOneShot(m_SFXDictionary[p_Sfx], SFX_VOLUME * GENERAL_VOLUME);
