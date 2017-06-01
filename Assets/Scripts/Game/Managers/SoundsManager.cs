@@ -10,7 +10,7 @@ public class SoundsManager: MonoBehaviour {
 
     #region SFX
     private const string PATH_SFX       = "SFX/";
-    private const int NB_SOURCES_SFX    = 10;
+    private const int NB_SOURCES_SFX    = 4;
     private const float SFX_VOLUME      = 0.5f;
 
     private List<AudioSource> m_SFXSources;
@@ -112,7 +112,16 @@ public class SoundsManager: MonoBehaviour {
         AudioSource l_AudioSource = m_SFXSources.Find(item => !item.isPlaying);
 		if (l_AudioSource) l_AudioSource.PlayOneShot(m_SFXDictionary[p_Sfx], SFX_VOLUME * GENERAL_VOLUME);
 	}
-    
+
+    public void PlaySFXOnTarget(SM_SFX p_Sfx, GameObject p_Target) {
+        if (!m_SFXDictionary.ContainsKey(p_Sfx)) return;
+
+        AudioSource l_AudioSource   = p_Target.AddComponent<AudioSource>();
+        l_AudioSource.loop          = false;
+        l_AudioSource.playOnAwake   = false;
+        l_AudioSource.PlayOneShot(m_SFXDictionary[p_Sfx], SFX_VOLUME * GENERAL_VOLUME);
+    }
+
     public void PlayMusic(SM_Musics p_Music) {
         if (!m_MusicsDictionary.ContainsKey(p_Music)) return;
 

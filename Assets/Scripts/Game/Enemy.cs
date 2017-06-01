@@ -29,6 +29,7 @@ public class Enemy : MonoBehaviour {
 
     void Awake () {
         attackTypes = (byte)AttackType.Main;
+        GameManager.instance.onGameOver.AddListener(DestroyInstance);
     }
 
     private void Start ()
@@ -63,6 +64,12 @@ public class Enemy : MonoBehaviour {
         if ((byte)type == attackTypes) {
             LooseHealth();
         }
+    }
+
+    private void DestroyInstance ()
+    {
+        GameManager.instance.onGameOver.RemoveListener(DestroyInstance);
+        Destroy(gameObject);
     }
 
 }
