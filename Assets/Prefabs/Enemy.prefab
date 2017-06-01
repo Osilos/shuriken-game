@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4005513489363324}
   - component: {fileID: 114092069848904580}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4132872855148208}
   - component: {fileID: 95819269877974494}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,10 +98,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f0a87c122a4d81439bce7ca0992d2d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  body: {fileID: 4132872855148208}
-  m_animator: {fileID: 95819269877974494}
+  m_scorePoints: 10
   health: 0
   attackTypes: 0
-  Radius: 0
-  PolarAngle: 0
-  ElevationAngle: 0
