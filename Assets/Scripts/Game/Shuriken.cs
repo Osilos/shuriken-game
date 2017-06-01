@@ -32,8 +32,6 @@ public class Shuriken: OVRGrabbable {
             m_TrailGO.SetActive(false);
         if (m_GrabCollider)
             m_GrabCollider.SetActive(true);
-
-        SetModeLaunched();
     }
 
     private void Update()
