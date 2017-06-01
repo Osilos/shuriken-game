@@ -16,7 +16,7 @@ public class Launcher : MonoBehaviour {
         item.isKinematic = false;
         item.useGravity = true;
         item.constraints = RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
-
+        
         RaycastHit hit;
         Debug.DrawRay( item.transform.position, linearVelocity.normalized * 20f, Color.red, 10f );
         if (Physics.Raycast( item.transform.position, linearVelocity, out hit, 20f )) {
@@ -48,6 +48,8 @@ public class Launcher : MonoBehaviour {
 
         } else {
             item.AddForce( linearVelocity * speedFactor, ForceMode.Impulse );
+            var rotation = Quaternion.LookRotation(linearVelocity.normalized);
+            item.transform.rotation = rotation;
         }
     }
 
