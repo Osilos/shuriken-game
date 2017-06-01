@@ -26,9 +26,17 @@ public class Shuriken: OVRGrabbable {
     
     void Start () {
         SetModeVoid();
-        if (m_TargetCollider) m_TargetCollider.SetActive(false);
-        if (m_TrailGO) m_TrailGO.SetActive(false);
-        if (m_GrabCollider) m_GrabCollider.SetActive(true);
+        if (m_TargetCollider)
+            m_TargetCollider.SetActive(false);
+        if (m_TrailGO)
+            m_TrailGO.SetActive(false);
+        if (m_GrabCollider)
+            m_GrabCollider.SetActive(true);
+    }
+
+    private void Update()
+    {
+        doAction();
     }
 
     public override void GrabBegin(OVRGrabber hand, Collider grabPoint) {
@@ -50,12 +58,7 @@ public class Shuriken: OVRGrabbable {
 
         Rigidbody l_ShurikenRB = GetComponent<Rigidbody>();
         if (l_ShurikenRB) {
-            l_ShurikenRB.isKinematic = false;
-            l_ShurikenRB.useGravity = true;
-            l_ShurikenRB.constraints = RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
-            l_ShurikenRB.AddForce(linearVelocity * m_handSpeedMultiplier, ForceMode.Impulse);
-            var rotation = Quaternion.LookRotation(linearVelocity.normalized);
-            l_ShurikenRB.transform.rotation = rotation;
+            Launcher.Launch(l_ShurikenRB, linearVelocity, m_handSpeedMultiplier, LayerMask.NameToLayer("Enemy") );
         }
         
         if (linearVelocity.magnitude > m_SoundLimit) GameManager.instance.soundManager.PlaySfx((SM_SFX)UnityEngine.Random.Range(0, 4));
@@ -77,6 +80,39 @@ public class Shuriken: OVRGrabbable {
 
     private void DoActionVoid() {
 
+    }
+
+    private void SetModeLaunched()
+    {
+        doAction = DoActionLaunched;
+        m_TargetCollider.SetActive(true);
+        m_GrabCollider.SetActive(false);
+
+        Rigidbody l_ShurikenRB = GetComponent<Rigidbody>();
+        if (l_ShurikenRB)
+        {
+            l_ShurikenRB.isKinematic = false;
+        }
+        
+    }
+
+    private void DoActionLaunched()
+    {
+        Rigidbody l_ShurikenRB = GetComponent<Rigidbody>();
+        if (l_ShurikenRB)
+        {
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(l_ShurikenRB.velocity), Vector3.Magnitude(l_ShurikenRB.velocity) / 10);
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        SetModeVoid();
+        Rigidbody l_ShurikenRB = GetComponent<Rigidbody>();
+        if (l_ShurikenRB)
+        {
+            l_ShurikenRB.isKinematic = true;
+        }
     }
 
     private void DoActionGrabbed() {
