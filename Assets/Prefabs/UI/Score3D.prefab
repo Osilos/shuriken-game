@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 65634617794709460}
   - component: {fileID: 23188298902006116}
   m_Layer: 14
-  m_Name: Cube
+  m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -352,7 +352,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e61f26fb2310cf24dbfba4a92d10f4e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ScoreText: {fileID: 114325240006983848}
+  m_scoreText: {fileID: 114325240006983848}
+  m_showToPlayerMark: {fileID: 0}
+  m_animDuration: 1
 --- !u!222 &222295810498022600
 CanvasRenderer:
   m_ObjectHideFlags: 1

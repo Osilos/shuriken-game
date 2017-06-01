@@ -10,6 +10,7 @@ public class Starter : MonoBehaviour {
     private Vector3 m_initialPosition;
     private Quaternion m_initialRotation;
     private Rigidbody m_cachedBody;
+    private SphereCollider m_cachedCollider;
 
     private bool m_reseting = false;
 
@@ -20,6 +21,7 @@ public class Starter : MonoBehaviour {
         m_initialRotation = transform.rotation;
         m_initialPosition = transform.position;
         m_cachedBody      = GetComponent<Rigidbody>();
+        m_cachedCollider  = GetComponent<SphereCollider>();
         GameManager.instance.onGameOver.AddListener(Reset);
     }
 	
@@ -37,6 +39,7 @@ public class Starter : MonoBehaviour {
     void Reset ()
     {
         m_reseting = true;
+        m_cachedCollider.enabled = false;
         m_cachedBody.velocity = Vector3.zero;
         m_cachedBody.angularVelocity = Vector3.zero;
         StartCoroutine(CoroutineReset());
@@ -62,5 +65,6 @@ public class Starter : MonoBehaviour {
         }
 
         m_reseting = false;
+        m_cachedCollider.enabled = true;
     }
 }
