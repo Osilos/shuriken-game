@@ -56,6 +56,14 @@ public class GameManager : MonoBehaviour {
         Enemy.onEnemyDie.AddListener(OnEnemyDie);
     }
     
+    private void Update ()
+    {
+        if (Input.GetButtonUp("Button A"))
+        {
+            OVRManager.display.RecenterPose();
+            print("RESET");
+        }
+    }
 
 	private void GameStart ()
     {
