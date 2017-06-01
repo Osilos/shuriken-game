@@ -5,7 +5,7 @@ using UnityEngine;
 public class Reset : MonoBehaviour {
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
         transform.localPosition = Vector3.zero;
         transform.rotation = Quaternion.identity;
 	}
