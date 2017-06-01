@@ -63,6 +63,7 @@ public class GameManager : MonoBehaviour {
         m_scoreManager.ResetScore();
         m_timer.LaunchTimer(m_timerTotalTime);
         waveManager.Play();
+        soundManager.PlayMusic((SM_Musics)Random.Range(0, 10));
     }
 
 
