@@ -155,7 +155,7 @@ public enum SM_SFX {
     enemy_pop_2,
     enemy_die_1,
     enemy_move_1,
-    enemy_move_2
+    enemy_move_2,
     //ambiance_1,
     //ambiance_2,
     //bonus_1,
@@ -166,7 +166,11 @@ public enum SM_SFX {
     //random_2,
     //random_3,
     //random_4,
-    //random_5
+    //random_5,
+    bullet_hit_wood,
+    bullet_hit_rock,
+    bullet_hit_dirt,
+    bullet_hit_water
 }
 
 public enum SM_Musics {
