@@ -20,12 +20,12 @@ public class ShurikenCollisionSound : MonoBehaviour {
     {
         if(collision.gameObject.CompareTag("bullet"))
         {
-
+            OnBulletHit();
         }
     }
     
     private void OnBulletHit()
     {
-        
+        GameManager.instance.soundManager.PlaySFXOnTarget(m_BulletHitSound, gameObject);
     }
 }

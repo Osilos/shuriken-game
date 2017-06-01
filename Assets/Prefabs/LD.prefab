@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 33772885633339070}
   - component: {fileID: 23172994912139210}
   - component: {fileID: 64119685598533650}
+  - component: {fileID: 114195836317496242}
   m_Layer: 14
   m_Name: Cliff_Desert_03
   m_TagString: Untagged
@@ -76,6 +77,7 @@ GameObject:
   - component: {fileID: 33839053375407986}
   - component: {fileID: 23001760188093532}
   - component: {fileID: 64415585650793832}
+  - component: {fileID: 114539703360298676}
   m_Layer: 14
   m_Name: Tree_Pine_04 (12)
   m_TagString: Untagged
@@ -94,6 +96,7 @@ GameObject:
   - component: {fileID: 33401814947118530}
   - component: {fileID: 23618601686048624}
   - component: {fileID: 64202932420070788}
+  - component: {fileID: 114911573567590844}
   m_Layer: 14
   m_Name: Tree_05_autumn_pal (3)
   m_TagString: Untagged
@@ -112,6 +115,7 @@ GameObject:
   - component: {fileID: 33444123746203502}
   - component: {fileID: 23552237703037312}
   - component: {fileID: 64742621043781702}
+  - component: {fileID: 114727031796422756}
   m_Layer: 14
   m_Name: Tree_Pine_04 (9)
   m_TagString: Untagged
@@ -166,6 +170,7 @@ GameObject:
   - component: {fileID: 33942057839533902}
   - component: {fileID: 23859463585522658}
   - component: {fileID: 64655209913030106}
+  - component: {fileID: 114720658595247686}
   m_Layer: 14
   m_Name: Tree_Pine_04 (11)
   m_TagString: Untagged
@@ -220,6 +225,7 @@ GameObject:
   - component: {fileID: 33985603555232346}
   - component: {fileID: 23865111965709266}
   - component: {fileID: 64305733870716008}
+  - component: {fileID: 114632919537425414}
   m_Layer: 14
   m_Name: Tree_Pine_04 (3)
   m_TagString: Untagged
@@ -292,6 +298,7 @@ GameObject:
   - component: {fileID: 33552515880473320}
   - component: {fileID: 23049861194651272}
   - component: {fileID: 64132639817162774}
+  - component: {fileID: 114027212169911010}
   m_Layer: 14
   m_Name: Tree_Pine_04
   m_TagString: Untagged
@@ -310,6 +317,7 @@ GameObject:
   - component: {fileID: 33428904759967960}
   - component: {fileID: 23897090352318324}
   - component: {fileID: 64725001649971152}
+  - component: {fileID: 114507099639854732}
   m_Layer: 14
   m_Name: Tree_Pine_04 (13)
   m_TagString: Untagged
@@ -328,6 +336,7 @@ GameObject:
   - component: {fileID: 33123518001956130}
   - component: {fileID: 65038381829867650}
   - component: {fileID: 23967551815610678}
+  - component: {fileID: 114187968576353882}
   m_Layer: 14
   m_Name: playerpoint
   m_TagString: Untagged
@@ -364,6 +373,7 @@ GameObject:
   - component: {fileID: 33824551715971572}
   - component: {fileID: 23311822190724730}
   - component: {fileID: 64262278860681374}
+  - component: {fileID: 114030702258312466}
   m_Layer: 14
   m_Name: Tree_Pine_04 (1)
   m_TagString: Untagged
@@ -382,6 +392,7 @@ GameObject:
   - component: {fileID: 33541276551893978}
   - component: {fileID: 23834599636721462}
   - component: {fileID: 64201684517518152}
+  - component: {fileID: 114898936641170246}
   m_Layer: 14
   m_Name: Tree_Pine_02
   m_TagString: Untagged
@@ -415,6 +426,7 @@ GameObject:
   - component: {fileID: 33014435104844614}
   - component: {fileID: 23713538338037478}
   - component: {fileID: 64419464109405726}
+  - component: {fileID: 114188392547919962}
   m_Layer: 14
   m_Name: Tree_Pine_04 (8)
   m_TagString: Untagged
@@ -541,6 +553,7 @@ GameObject:
   - component: {fileID: 33861258420063216}
   - component: {fileID: 23802333980718992}
   - component: {fileID: 64713469640868064}
+  - component: {fileID: 114603927100318090}
   m_Layer: 14
   m_Name: Tree_Pine_04 (2)
   m_TagString: Untagged
@@ -559,6 +572,7 @@ GameObject:
   - component: {fileID: 33707288524476500}
   - component: {fileID: 23327758412890306}
   - component: {fileID: 64511232213625974}
+  - component: {fileID: 114606371345864318}
   m_Layer: 14
   m_Name: Tree_Pine_04 (5)
   m_TagString: Untagged
@@ -577,6 +591,7 @@ GameObject:
   - component: {fileID: 33882260273952226}
   - component: {fileID: 23821200392171978}
   - component: {fileID: 64929532797989746}
+  - component: {fileID: 114395122045093782}
   m_Layer: 14
   m_Name: Tree_Pine_04 (14)
   m_TagString: Untagged
@@ -595,6 +610,7 @@ GameObject:
   - component: {fileID: 33671153322067564}
   - component: {fileID: 23357152762116438}
   - component: {fileID: 64866492861573660}
+  - component: {fileID: 114290044746564960}
   m_Layer: 14
   m_Name: Tree_05_autumn_pal (1)
   m_TagString: Untagged
@@ -613,6 +629,7 @@ GameObject:
   - component: {fileID: 33803361464668396}
   - component: {fileID: 23191364122428882}
   - component: {fileID: 64521028058924720}
+  - component: {fileID: 114821889494559914}
   m_Layer: 14
   m_Name: Tree_Pine_02 (1)
   m_TagString: Untagged
@@ -664,6 +681,7 @@ GameObject:
   - component: {fileID: 33315819884011748}
   - component: {fileID: 23989599658101246}
   - component: {fileID: 64221900998294742}
+  - component: {fileID: 114049913139132746}
   m_Layer: 14
   m_Name: Tree_Pine_04 (4)
   m_TagString: Untagged
@@ -682,6 +700,7 @@ GameObject:
   - component: {fileID: 33527137406000138}
   - component: {fileID: 23306805321728872}
   - component: {fileID: 64773005890236916}
+  - component: {fileID: 114042765883800468}
   m_Layer: 14
   m_Name: Tree_Pine_02 (2)
   m_TagString: Untagged
@@ -700,6 +719,7 @@ GameObject:
   - component: {fileID: 33720840212304460}
   - component: {fileID: 23514031258751520}
   - component: {fileID: 64431344493190992}
+  - component: {fileID: 114716060028639898}
   m_Layer: 14
   m_Name: Tree_05_autumn_pal
   m_TagString: Untagged
@@ -754,6 +774,7 @@ GameObject:
   - component: {fileID: 33798037574232750}
   - component: {fileID: 23630863456257194}
   - component: {fileID: 64295700634824950}
+  - component: {fileID: 114222100203759786}
   m_Layer: 14
   m_Name: Tree_Pine_04 (6)
   m_TagString: Untagged
@@ -772,6 +793,7 @@ GameObject:
   - component: {fileID: 33496509231198374}
   - component: {fileID: 23548799420414596}
   - component: {fileID: 64012806902944342}
+  - component: {fileID: 114694870364563728}
   m_Layer: 14
   m_Name: Tree_Pine_03
   m_TagString: Untagged
@@ -806,6 +828,7 @@ GameObject:
   - component: {fileID: 33350581283762668}
   - component: {fileID: 23356215472025624}
   - component: {fileID: 64857014725827296}
+  - component: {fileID: 114279964085032980}
   m_Layer: 14
   m_Name: Tree_Pine_04 (10)
   m_TagString: Untagged
@@ -824,6 +847,7 @@ GameObject:
   - component: {fileID: 33249771756610778}
   - component: {fileID: 23317119783045662}
   - component: {fileID: 64413368382329822}
+  - component: {fileID: 114008840977920494}
   m_Layer: 14
   m_Name: Tree_05_autumn_pal (2)
   m_TagString: Untagged
@@ -860,6 +884,7 @@ GameObject:
   - component: {fileID: 33608745912900432}
   - component: {fileID: 23440593180111884}
   - component: {fileID: 64060901702300158}
+  - component: {fileID: 114080203458553452}
   m_Layer: 14
   m_Name: Tree_Pine_04 (7)
   m_TagString: Untagged
@@ -914,6 +939,7 @@ GameObject:
   - component: {fileID: 33400910126785026}
   - component: {fileID: 23007968841181608}
   - component: {fileID: 64356130535277506}
+  - component: {fileID: 114136603067026934}
   m_Layer: 14
   m_Name: Tree_Pine_03 (1)
   m_TagString: Untagged
@@ -1040,6 +1066,7 @@ GameObject:
   - component: {fileID: 33316931746832766}
   - component: {fileID: 23594385365450468}
   - component: {fileID: 64372958424913244}
+  - component: {fileID: 114432400261299700}
   m_Layer: 14
   m_Name: Tree_01_summer_pal
   m_TagString: Untagged
@@ -4807,3 +4834,327 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &114008840977920494
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1753154101260088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eec4bace12ac1547a1fcbce26be59d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BulletHitSound: 9
+--- !u!114 &114027212169911010
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1171785857594576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eec4bace12ac1547a1fcbce26be59d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BulletHitSound: 9
+--- !u!114 &114030702258312466
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1212394311868838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eec4bace12ac1547a1fcbce26be59d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BulletHitSound: 9
+--- !u!114 &114042765883800468
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1612164213144306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eec4bace12ac1547a1fcbce26be59d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BulletHitSound: 9
+--- !u!114 &114049913139132746
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1605071093319664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eec4bace12ac1547a1fcbce26be59d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BulletHitSound: 9
+--- !u!114 &114080203458553452
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1778426090246578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eec4bace12ac1547a1fcbce26be59d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BulletHitSound: 9
+--- !u!114 &114136603067026934
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1817458994032280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eec4bace12ac1547a1fcbce26be59d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BulletHitSound: 9
+--- !u!114 &114187968576353882
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1208024342227354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eec4bace12ac1547a1fcbce26be59d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BulletHitSound: 9
+--- !u!114 &114188392547919962
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1279003581398552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eec4bace12ac1547a1fcbce26be59d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BulletHitSound: 9
+--- !u!114 &114195836317496242
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1002899919501178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eec4bace12ac1547a1fcbce26be59d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BulletHitSound: 11
+--- !u!114 &114222100203759786
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1678380599136120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eec4bace12ac1547a1fcbce26be59d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BulletHitSound: 9
+--- !u!114 &114279964085032980
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1728468278698774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eec4bace12ac1547a1fcbce26be59d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BulletHitSound: 9
+--- !u!114 &114290044746564960
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1549157565168970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eec4bace12ac1547a1fcbce26be59d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BulletHitSound: 9
+--- !u!114 &114395122045093782
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1546355355834538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eec4bace12ac1547a1fcbce26be59d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BulletHitSound: 9
+--- !u!114 &114432400261299700
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1966906999912220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eec4bace12ac1547a1fcbce26be59d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BulletHitSound: 9
+--- !u!114 &114507099639854732
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1188789242740094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eec4bace12ac1547a1fcbce26be59d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BulletHitSound: 9
+--- !u!114 &114539703360298676
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1009936143829054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eec4bace12ac1547a1fcbce26be59d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BulletHitSound: 9
+--- !u!114 &114603927100318090
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1490200683641696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eec4bace12ac1547a1fcbce26be59d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BulletHitSound: 9
+--- !u!114 &114606371345864318
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1497588744593284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eec4bace12ac1547a1fcbce26be59d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BulletHitSound: 9
+--- !u!114 &114632919537425414
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1143339832692958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eec4bace12ac1547a1fcbce26be59d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BulletHitSound: 9
+--- !u!114 &114694870364563728
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1691086656452502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eec4bace12ac1547a1fcbce26be59d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BulletHitSound: 9
+--- !u!114 &114716060028639898
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1612291807455562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eec4bace12ac1547a1fcbce26be59d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BulletHitSound: 9
+--- !u!114 &114720658595247686
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1104172873831816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eec4bace12ac1547a1fcbce26be59d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BulletHitSound: 9
+--- !u!114 &114727031796422756
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1025077878390598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eec4bace12ac1547a1fcbce26be59d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BulletHitSound: 9
+--- !u!114 &114821889494559914
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1556544940755068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eec4bace12ac1547a1fcbce26be59d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BulletHitSound: 9
+--- !u!114 &114898936641170246
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1221160924275436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eec4bace12ac1547a1fcbce26be59d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BulletHitSound: 9
+--- !u!114 &114911573567590844
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1011802965458604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eec4bace12ac1547a1fcbce26be59d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BulletHitSound: 9

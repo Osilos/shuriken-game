@@ -364,6 +364,74 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c85c6e3a3db1231409ecf7c8a23f91af, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &752512410 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1872549961466738, guid: c85c6e3a3db1231409ecf7c8a23f91af,
+    type: 2}
+  m_PrefabInternal: {fileID: 752512409}
+--- !u!1 &752512411 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1830969170949018, guid: c85c6e3a3db1231409ecf7c8a23f91af,
+    type: 2}
+  m_PrefabInternal: {fileID: 752512409}
+--- !u!114 &752512412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 752512410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eec4bace12ac1547a1fcbce26be59d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BulletHitSound: 10
+--- !u!114 &752512413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 752512411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eec4bace12ac1547a1fcbce26be59d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BulletHitSound: 10
+--- !u!1 &752512414 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1893927604154456, guid: c85c6e3a3db1231409ecf7c8a23f91af,
+    type: 2}
+  m_PrefabInternal: {fileID: 752512409}
+--- !u!114 &752512415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 752512414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eec4bace12ac1547a1fcbce26be59d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BulletHitSound: 9
+--- !u!1 &752512416 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1387695165854156, guid: c85c6e3a3db1231409ecf7c8a23f91af,
+    type: 2}
+  m_PrefabInternal: {fileID: 752512409}
+--- !u!114 &752512417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 752512416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eec4bace12ac1547a1fcbce26be59d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BulletHitSound: 9
 --- !u!1001 &773485847
 Prefab:
   m_ObjectHideFlags: 0
