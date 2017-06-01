@@ -445,4 +445,4 @@ MonoBehaviour:
   m_TargetCollider: {fileID: 1017763853522114}
   m_GrabCollider: {fileID: 1494612409477058}
   m_TrailGO: {fileID: 1996672910846642}
-  m_handSpeedMultiplier: 0
+  m_handSpeedMultiplier: 3
